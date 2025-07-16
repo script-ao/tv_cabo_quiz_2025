@@ -1,0 +1,47 @@
+.ft_wrapper{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem 7rem;
+    width: 100%;
+    z-index: 4;
+}
+
+.ft_image{
+    > img{
+        width: 8rem;
+    }
+}
+
+.ft_wrapper_social{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap: 2rem;
+    span{
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+.ft_container_social{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap: 1.5rem;
+    
+}
+
+.ft_social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background: #fff;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+}

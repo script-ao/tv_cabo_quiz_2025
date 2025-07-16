@@ -11,11 +11,13 @@ import {
   Register,
   Certificate,
 } from "../../screens";
+import { AppLayout } from "../../layouts";
 
 function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route element={<AppLayout />}>
         <Route index path="/" element={<Splash />}/>
         <Route path="/start" element={<Start />}/>
         <Route path="/intro" element={<Intro />}/>
@@ -25,7 +27,9 @@ function AppRouter() {
         <Route path="/lose" element={<Lose />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/certificate" element={<Certificate />}/>
+         </Route>
       </Routes>
+
     </BrowserRouter>
   );
 }
