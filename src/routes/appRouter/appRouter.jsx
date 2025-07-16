@@ -1,0 +1,33 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import {
+  Splash,
+  Start,
+  Intro,
+  World,
+  Trivia,
+  Win,
+  Lose,
+  Register,
+  Certificate,
+} from "../../screens";
+
+function AppRouter() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<Splash />}/>
+        <Route path="/start" element={<Start />}/>
+        <Route path="/intro" element={<Intro />}/>
+        <Route path="/world" element={<World />}/>
+        <Route path="/trivia" element={<Trivia />}/>
+        <Route path="/win" element={<Win />}/>
+        <Route path="/lose" element={<Lose />}/>
+        <Route path="/register" element={<Register />}/>
+        <Route path="/certificate" element={<Certificate />}/>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export { AppRouter };
