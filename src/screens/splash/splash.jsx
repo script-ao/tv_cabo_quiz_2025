@@ -1,6 +1,7 @@
 import React from "react";
 import person from "../../assets/images/pessoasss1.svg"
 import tvcabo from "../../assets/images/svgs/logo/tvcabo.svg"
+import {Link} from "react-router-dom"
 function Splash() {
   return (
     <React.Fragment>
@@ -22,7 +23,9 @@ function Splash() {
                </div>
 
                <div className='sp_btn'>
+                <Link to="/intro">
                 <button> INICIAR</button>
+              </Link>
                </div>
             </div>
 
