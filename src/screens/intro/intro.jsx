@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import {Button} from "../../components"
 function Intro() {
   return (
     <React.Fragment>
@@ -7,9 +8,9 @@ function Intro() {
         <main className="i_container">
           <h2>Bem-vindo ao <br/>universo  da TVCABO</h2>
           <p>Testa os teus conhecimentos.<br/> Mostra que a tua fibra é o teu mundo<br/> e ganha prémios com a TVCABO.</p>
-          <Link to="/intro">
-                <button> INICIAR</button>
-              </Link>
+          <Link to="/start">
+               <Button text="AVANÇAR" className="btn btn_Light" /> 
+            </Link>
         </main>
       </section>
     </React.Fragment>

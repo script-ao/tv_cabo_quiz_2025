@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Button} from "../../components"
 function Register() {
   return (
     <React.Fragment>
@@ -25,7 +25,7 @@ function Register() {
               </div>
           </div>
             <div className="re_btn">
-              <button>Enviar</button>
+              <Button text="ENVIAR" className="btn" /> 
             </div>
             </form>
         </main>
