@@ -1,11 +1,15 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Lose() {
   return (
     <React.Fragment>
-      <section>
-        <main>
-          <h1>Lose Screen</h1>
+      <section className="lo_wrapper">
+        <main className="lo_container">
+         
+          <h2>OPS... NÃO  <br/> FOI DESTA!</h2>
+          <Link to="/intro">
+                <button> INICIAR</button>
+              </Link>
         </main>
       </section>
     </React.Fragment>
