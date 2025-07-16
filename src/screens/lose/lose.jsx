@@ -3,7 +3,11 @@ import React from "react";
 function Lose() {
   return (
     <React.Fragment>
-      <div></div>
+      <section>
+        <main>
+          <h1>Lose Screen</h1>
+        </main>
+      </section>
     </React.Fragment>
   );
 }
