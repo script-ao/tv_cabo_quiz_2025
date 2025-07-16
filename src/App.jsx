@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { AppRouter } from './routes/appRouter/appRouter'
 import './App.scss'
 
 function App() {
   return (
     <>
-    <div></div>
+    <AppRouter/>
     </>
   )
 }
