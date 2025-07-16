@@ -1,1 +1,1 @@
-export * from './lose';
+export * from './splash';
