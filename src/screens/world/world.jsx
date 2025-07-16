@@ -1,15 +1,15 @@
 import React from "react";
 
-function Win() {
+function World() {
   return (
     <React.Fragment>
       <section>
         <main>
-          <h1>Win Screen</h1>
+          <h1>World Screen</h1>
         </main>
       </section>
     </React.Fragment>
   );
 }
 
-export { Win };
+export { World };
