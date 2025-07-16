@@ -1,11 +1,11 @@
 import React from "react";
 
-function Splash() {
+function Start() {
   return (
     <React.Fragment>
-      <div></div>
+      <div>Start Screen</div>
     </React.Fragment>
   );
 }
 
-export { Splash };
+export { Start };
