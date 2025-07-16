@@ -1,6 +1,6 @@
 import React from "react";
 
-function Splash() {
+function Win() {
   return (
     <React.Fragment>
       <div></div>
@@ -8,4 +8,4 @@ function Splash() {
   );
 }
 
-export { Splash };
+export { Win };
