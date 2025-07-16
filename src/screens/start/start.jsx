@@ -3,7 +3,11 @@ import React from "react";
 function Start() {
   return (
     <React.Fragment>
-      <div>Start Screen</div>
+      <section>
+        <main>
+          <h1>Trivia Screen</h1>
+        </main>
+      </section>
     </React.Fragment>
   );
 }
