@@ -1,5 +1,6 @@
 import React from "react";
-
+import person from "../../assets/images/pessoasss1.svg"
+import tvcabo from "../../assets/images/svgs/logo/tvcabo.svg"
 function Splash() {
   return (
     <React.Fragment>
@@ -8,14 +9,15 @@ function Splash() {
             <div className='sp_content'>
             
                <span className='sp_highlight'>
-                <p>Explora</p><br/>
+                <p>Explora</p>
                 <p>O teu mundo</p>
                </span>
 
                <div className='sp_container_subtitle'>
                 <p>by</p>
-                <span className='sp_subtitle'> <p>tvcabo</p> <br/>
-                <p>sempre ligado</p>
+                <img src={tvcabo} alt="" />
+                <span className='sp_subtitle'>
+                
                </span>
                </div>
 
@@ -25,7 +27,7 @@ function Splash() {
             </div>
 
             <div className='sp_person_img'>
-                {/*<img src="" alt="" />*/}
+                <img src={person} alt="" />
             </div>
             </main>
         </section>
