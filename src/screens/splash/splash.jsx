@@ -17,10 +17,12 @@ function Splash() {
 
                <div className='sp_container_subtitle'>
                 <p>by</p>
-                <img src={tvcabo} alt="" />
-                <span className='sp_subtitle'>
-                
-               </span>
+                <div className="sp_img_subtitle">
+                  <img src={tvcabo} alt="" />
+                  <span className='sp_subtitle'>
+                  sempre ligado
+                    </span>
+                </div>
                </div>
 
                <div className='sp_btn'>
