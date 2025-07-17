@@ -85,7 +85,7 @@ function Register() {
               </div>
             </div>
             <div className="re_btn">
-              <Button text="ENVIAR" className="btn" type="submit" />
+              <Button text="ENVIAR" className="btn btn_Light" type="submit" />
             </div>
           </form>
         </main>

@@ -17,7 +17,7 @@ function Lose() {
           <div className="lo_buttons">
             <Button
               text="RECOMEÇAR"
-              className="btn btn_tertiary"
+              className="btn btn_Light"
               onClick={resetGame}
             />
           </div>
