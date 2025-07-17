@@ -46,17 +46,19 @@ function Lead() {
         setvalueMordal(
           {
             className:"btn_sucess",
-            text:"Obrigado por preencher"
+            text:"Obrigado por preencher",
+            to: "/intro"
           }
         )
-        navigate("/intro");
+        //navigate("/intro");
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
         
         setvalueMordal(
           {
             className:"btn_warn",
-            text:"Ocorreu um erro ao enviar o formulário. Tente novamente."
+            text:"Ocorreu um erro ao enviar o formulário. Tente novamente.",
+            to: ""
           }
         )
       }
@@ -66,7 +68,8 @@ function Lead() {
       setvalueMordal(
           {
             className:"btn_warn",
-            text:"Ocorreu um erro de rede. Verifique sua conexão e tente novamente."
+            text:"Ocorreu um erro de rede. Verifique sua conexão e tente novamente.",
+            to: ""
           }
         )
     }
@@ -79,6 +82,7 @@ function Lead() {
         text={valueMordal.text}
         setOpenMordal={setOpenMordal}
         className={valueMordal.className}
+        to={valueMordal.to}
         />}
         <main className="le_container">
           <div className="le_highlight">
@@ -138,7 +142,7 @@ function Lead() {
               </div>
             </div>
             <div className="le_btn">
-              <Button text="ENVIAR" className="btn" type="submit" />
+              <Button text="ENVIAR" className="btn btn_Light" type="submit" />
             </div>
           </form>
         </main>
