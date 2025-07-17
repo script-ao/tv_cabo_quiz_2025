@@ -4,7 +4,7 @@ import './sass/main.scss'
 function App() {
   return (
     <>
-    <AppRouter/>
+      <AppRouter />
     </>
   )
 }
