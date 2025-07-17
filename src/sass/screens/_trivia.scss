@@ -1,6 +1,6 @@
 .tr_wrapper{
     flex:1;
-   
+
     position: relative;
     background: url("../assets/images/svgs/backgrounds/FUNDO_CAMPANHA_300MB_TVC_2025.svg") no-repeat;
     background-size: cover;
@@ -32,17 +32,24 @@
     position: relative;
     z-index: 2;
     padding: 2rem 2rem;
-    
+
+}
+
+.tr_timer {
+    width: 100%;
+    padding: 0 2rem;
+    margin-bottom: -2rem;
+    z-index: 3;
 }
 .tr_progress-bar {
   width: 92%;
-  
+
   background-color: #fff;
   border-radius: 9999px;
- 
+
   padding: 1rem;
-  
-  
+
+
 }
 
 .tr_progress-fill {
@@ -50,7 +57,7 @@
   width: 95%; 
   background-color: #1FB1D0;
   border-radius: 9999px;
-  
+
   transition: width 0.3s ease;
 }
 .tr_container_aw{
@@ -67,7 +74,7 @@
     width: 50%;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-   
+
 }
 
 .tr_word{
@@ -95,7 +102,7 @@
     img{
         width: 70%;
     }
-   
+
 }
 
 
@@ -110,7 +117,7 @@
         text-align: center;
         line-height: 4rem;
         font-weight: 800;
-        
+
     }
 }
 
@@ -118,7 +125,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     gap: 4rem;
     width: 50%;   
 }

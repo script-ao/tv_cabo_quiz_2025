@@ -1,0 +1,108 @@
+.inf_wrapper{
+    flex:1;
+   
+    position: relative;
+    background: url("../assets/images/svgs/backgrounds/FUNDO_CAMPANHA_300MB_TVC_2025.svg") no-repeat;
+    background-size: cover;
+    height: 100svh;
+    font-family: "Poppins";
+    overflow:hidden;
+    //padding: 0 2rem;
+
+    &::after{
+        content: '';
+        background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
+        opacity: 0.8;
+        position: absolute;
+        height: 100svh;
+        width: 100%;
+        top:0;
+        z-index: 1;
+    }
+}
+
+.inf_container{
+    display: flex;
+    justify-content: space-between;
+   
+   
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+   
+    padding: 0 4rem;
+}
+
+.inf_content{
+    
+    
+    margin-top: 10rem;
+    
+}
+
+.inf_container_image{
+    display: flex;
+    
+    
+    
+    img{
+        width: 45%;
+    }
+}
+
+.inf_description{
+    width: 100%;
+    margin-left: 2rem;
+    p{
+        font-size: 5rem;
+        color:#fff;
+        font-weight: semibold;
+        line-height: 7rem;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+.inf_person_img { 
+    
+    display: flex;
+    justify-content: end;
+    
+
+}
+
+
+@media (min-resolution: 2dppx){
+
+.inf_content{
+   
+    margin-top: 17rem;
+    margin-bottom: 9rem;
+}
+  
+.inf_description{
+    
+    
+    p{
+    font-size: 4rem;
+     line-height: 5rem;
+ 
+        
+    }
+}
+.inf_container_image{
+    
+    width: 40%;
+
+    img{
+        width: 100%;
+    }
+   
+}
+
+
+
+
+
+}

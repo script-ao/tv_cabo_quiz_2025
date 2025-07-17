@@ -1,0 +1,298 @@
+{
+  "categories": {
+    "games": {
+      "perguntas": [
+        {
+          "question": "Qual é o serviço TVCABO essencial para garantir que a sua experiência de jogo online seja fluida e sem interrupções, mesmo em momentos de pico?",
+          "options": [
+            {"answer": "Internet Ilimitada", "correct": true},
+            {"answer": "Planos de TV", "correct": false},
+            {"answer": "Planos de Voz", "correct": false},
+            {"answer": "TVCabo Play", "correct": false}
+          ]
+        },
+        {
+          "question": "Com a Internet Ilimitada da TVCABO, qual destas atividades de gaming é mais fácil de realizar sem te preocupar com o consumo de dados ou lentidão?",
+          "options": [
+            {"answer": "Baixar jogos grandes em minutos", "correct": true},
+            {"answer": "Fazer chamadas telefónicas", "correct": false},
+            {"answer": "Assistir a noticiários", "correct": false},
+            {"answer": "Enviar SMS", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual é o nome do famoso canalizador da Nintendo que resgata princesas?",
+          "options": [
+            {"answer": "Luigi", "correct": false},
+            {"answer": "Mario", "correct": true},
+            {"answer": "Sonic", "correct": false},
+            {"answer": "Link", "correct": false}
+          ]
+        },
+        {
+          "question": "Em que ano foi lançado o primeiro consola PlayStation pela Sony?",
+          "options": [
+            {"answer": "1990", "correct": false},
+            {"answer": "1994", "correct": true},
+            {"answer": "1998", "correct": false},
+            {"answer": "2000", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual é o jogo popular em que vários jogadores competem entre si, e vence quem ficar por último na partida — sozinho ou em equipa?",
+          "options": [
+            {"answer": "Minecraft", "correct": false},
+            {"answer": "The Sims", "correct": false},
+            {"answer": "Fortnite", "correct": true},
+            {"answer": "Candy Crush", "correct": false}
+          ]
+        }
+      ]
+    },
+    "redes_sociais": {
+      "perguntas": [
+        {
+          "question": "Qual é a velocidade máxima da Internet Ilimitada da TVCABO, que te permite partilhar os teus momentos, fotos e vídeos nas redes sociais sem preocupações?",
+          "options": [
+            {"answer": "10 Mbps", "correct": false},
+            {"answer": "300 Mbps", "correct": true},
+            {"answer": "300 Kbps", "correct": false},
+            {"answer": "3 Mbps", "correct": false}
+          ]
+        },
+        {
+          "question": "O que é que a Internet Ilimitada da TVCABO lhe permite fazer nas redes sociais sem se preocupar com o consumo excessivo de dados?",
+          "options": [
+            {"answer": "Apenas enviar mensagens de texto", "correct": false},
+            {"answer": "Assistir longos Podcasts e lives em alta definição", "correct": true},
+            {"answer": "Usar apenas em horários específicos", "correct": false},
+            {"answer": "Apenas navegar em sites de notícias", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual rede social é conhecida mundialmente pela partilha de vídeos curtos e virais, frequentemente acompanhados por desafios de dança?",
+          "options": [
+            {"answer": "Facebook", "correct": false},
+            {"answer": "Instagram", "correct": false},
+            {"answer": "TikTok", "correct": true},
+            {"answer": "Twitter (X)", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual é a rede social conhecida por ser utilizada para networking profissional e partilha de currículos?",
+          "options": [
+            {"answer": "Google", "correct": false},
+            {"answer": "Apple", "correct": false},
+            {"answer": "Facebook Inc.", "correct": false},
+            {"answer": "LinkedIn", "correct": true}
+          ]
+        },
+        {
+          "question": "Qual influencer angolana foi indicada pela Forbes em 2020 como a mais lucrativa do país?",
+          "options": [
+            {"answer": "Ednardo Soares", "correct": false},
+            {"answer": "Yonaza Almeida", "correct": false},
+            {"answer": "Ariovaldo", "correct": false},
+            {"answer": "Juddy da Conceição", "correct": true}
+          ]
+        }
+      ]
+    },
+    "musica": {
+      "perguntas": [
+        {
+          "question": "Qual é o serviço fundamental da TVCABO que permite ouvir música em alta qualidade, descarregar álbuns com rapidez e ver videoclipes sem pausas?",
+          "options": [
+            {"answer": "Planos de Voz", "correct": false},
+            {"answer": "Planos de TV", "correct": false},
+            {"answer": "Internet Ilimitada", "correct": true},
+            {"answer": "Serviços de SMS", "correct": false}
+          ]
+        },
+        {
+          "question": "Com a Internet Ilimitada da TVCABO, como podes desfrutar das tuas músicas favoritas sem preocupações com lentidão ou interrupções?",
+          "options": [
+            {"answer": "Apenas ouvir rádio AM/FM", "correct": false},
+            {"answer": "Ouvir playlists em plataformas de streaming e assistir a shows online em tempo real", "correct": true},
+            {"answer": "Apenas comprar CDs online", "correct": false},
+            {"answer": "Enviar partituras por fax", "correct": false}
+          ]
+        },
+        {
+          "question": "Quem é conhecido mundialmente como o 'Rei do Pop'?",
+          "options": [
+            {"answer": "Elvis Presley", "correct": false},
+            {"answer": "Matias Damásio", "correct": false},
+            {"answer": "Elias Diakimuezo", "correct": false},
+            {"answer": "Michael Jackson", "correct": true}
+          ]
+        },
+        {
+          "question": "O cantor Matuê é reconhecido por representar que estilo musical?",
+          "options": [
+            {"answer": "Kuduro", "correct": false},
+            {"answer": "Trap", "correct": true},
+            {"answer": "Sertanejo", "correct": false},
+            {"answer": "Semba", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual destas plataformas permite ouvir os álbuns e playlists dos teus cantores preferidos?",
+          "options": [
+            {"answer": "Spotify", "correct": true},
+            {"answer": "Play Store", "correct": false},
+            {"answer": "Amazon", "correct": false},
+            {"answer": "Platina Line", "correct": false}
+          ]
+        }
+      ]
+    },
+    "filmes_e_series": {
+      "perguntas": [
+        {
+          "question": "Qual é o serviço essencial da TVCABO que te permite ver os teus filmes e séries preferidos nas plataformas de streaming com a melhor qualidade e sem interrupções?",
+          "options": [
+            {"answer": "Planos de Voz", "correct": false},
+            {"answer": "Planos de TV", "correct": false},
+            {"answer": "Internet Ilimitada", "correct": true},
+            {"answer": "Serviços de SMS", "correct": false}
+          ]
+        },
+        {
+          "question": "Para além da Internet, que outro serviço da TVCABO disponibiliza uma ampla seleção de canais com filmes, séries e entretenimento para todas as idades?",
+          "options": [
+            {"answer": "Planos de Voz", "correct": false},
+            {"answer": "Planos de TV", "correct": true},
+            {"answer": "Internet Ilimitada", "correct": false},
+            {"answer": "Cinema", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual é o nome do famoso diretor de cinema responsável por filmes épicos como 'Titanic' e 'Avatar'?",
+          "options": [
+            {"answer": "Steven Spielberg", "correct": false},
+            {"answer": "Christopher Nolan", "correct": false},
+            {"answer": "James Cameron", "correct": true},
+            {"answer": "Quentin Tarantino", "correct": false}
+          ]
+        },
+        {
+          "question": "Em que aclamada série de TV os personagens lutam pelo controlo do continente fictício de Westeros?",
+          "options": [
+            {"answer": "The Crown", "correct": false},
+            {"answer": "Game of Thrones", "correct": true},
+            {"answer": "Breaking Bad", "correct": false},
+            {"answer": "Friends", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual foi o filme sul-coreano que fez história ao vencer o Óscar de Melhor Filme em 2020?",
+          "options": [
+            {"answer": "Roma", "correct": false},
+            {"answer": "Minari", "correct": false},
+            {"answer": "Drive My Car", "correct": false},
+            {"answer": "Parasita", "correct": true}
+          ]
+        }
+      ]
+    },
+    "desporto": {
+      "perguntas": [
+        {
+          "question": "Qual é o serviço da TVCABO que garante uma ligação estável e de alta qualidade para acompanhar transmissões em direto de analistas desportivos?",
+          "options": [
+            {"answer": "Planos de Voz", "correct": false},
+            {"answer": "Planos de TV", "correct": false},
+            {"answer": "Internet Ilimitada", "correct": true},
+            {"answer": "Rádio 5", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual é o serviço da TVCABO que garante acesso a canais desportivos premium?",
+          "options": [
+            {"answer": "Planos de Voz", "correct": false},
+            {"answer": "Planos de TV", "correct": true},
+            {"answer": "Internet Ilimitada", "correct": false},
+            {"answer": "TPA", "correct": false}
+          ]
+        },
+        {
+          "question": "Quem é o melhor marcador da história da Seleção Nacional de Angola (Palancas Negras)?",
+          "options": [
+            {"answer": "Akwá", "correct": true},
+            {"answer": "Mantorras", "correct": false},
+            {"answer": "Gilberto", "correct": false},
+            {"answer": "Flávio Amado", "correct": false}
+          ]
+        },
+        {
+          "question": "Que país conquistou o título de campeão do Campeonato do Mundo de Futebol Masculino em 2022?",
+          "options": [
+            {"answer": "Brasil", "correct": false},
+            {"answer": "França", "correct": false},
+            {"answer": "Alemanha", "correct": false},
+            {"answer": "Argentina", "correct": true}
+          ]
+        },
+        {
+          "question": "Qual é o nome do desporto praticado pelo famoso atleta LeBron James?",
+          "options": [
+            {"answer": "Futebol", "correct": false},
+            {"answer": "Ténis", "correct": false},
+            {"answer": "Basquetebol", "correct": true},
+            {"answer": "Golfe", "correct": false}
+          ]
+        }
+      ]
+    },
+    "startups_e_inovacao": {
+      "perguntas": [
+        {
+          "question": "Qual é o serviço essencial da TVCABO para uma startup garantir uma comunicação eficaz e acesso a recursos online?",
+          "options": [
+            {"answer": "Planos de TV", "correct": false},
+            {"answer": "Internet Ilimitada", "correct": true},
+            {"answer": "Pacotes de SMS", "correct": false},
+            {"answer": "Telefone Fixo", "correct": false}
+          ]
+        },
+        {
+          "question": "Além da Internet, que outro serviço da TVCABO é essencial para garantir uma comunicação fluída numa startup?",
+          "options": [
+            {"answer": "Planos de Voz", "correct": true},
+            {"answer": "Planos de TV", "correct": false},
+            {"answer": "Internet Ilimitada", "correct": false},
+            {"answer": "Correio", "correct": false}
+          ]
+        },
+        {
+          "question": "Qual empresa é amplamente reconhecida pelos seus carros elétricos inovadores e pela sua atuação na exploração espacial através da SpaceX?",
+          "options": [
+            {"answer": "Amazon", "correct": false},
+            {"answer": "Google", "correct": false},
+            {"answer": "Tesla", "correct": true},
+            {"answer": "Apple", "correct": false}
+          ]
+        },
+        {
+          "question": "O que significa a sigla 'AI' no contexto de tecnologia e inovação?",
+          "options": [
+            {"answer": "Análise de Informação", "correct": false},
+            {"answer": "Inteligência Aplicada", "correct": false},
+            {"answer": "Automação Industrial", "correct": false},
+            {"answer": "Inteligência Artificial", "correct": true}
+          ]
+        },
+        {
+          "question": "O que é um pitch?",
+          "options": [
+            {"answer": "Um relatório de análise de mercado", "correct": false},
+            {"answer": "Uma apresentação breve e persuasiva de uma ideia, projeto ou produto", "correct": true},
+            {"answer": "Um plano de negócios detalhado com projeções financeiras", "correct": false},
+            {"answer": "Uma campanha publicitária multicanal", "correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

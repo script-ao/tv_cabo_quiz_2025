@@ -1,23 +1,23 @@
-.win_wrapper{
-   
-   display: flex;
-   align-items: center;
-    justify-content: center;
-    background: url("../assets/images/svgs/backgrounds/FUNDO_CAMPANHA_300MB_TVC_2025.svg") no-repeat;
-    background-size: cover;
-    height: 100svh;
-    font-family:"Poppins";
-   &::after{
-    content: '';
-    background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
+.win_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../assets/images/svgs/backgrounds/FUNDO_CAMPANHA_300MB_TVC_2025.svg")
+    no-repeat;
+  background-size: cover;
+  height: 100svh;
+  font-family: "Poppins";
+  
+  &::after {
+    content: "";
+    background: linear-gradient(to bottom, #081435 0%, #1c2252 100%);
     opacity: 0.8;
     position: absolute;
     height: 100svh;
     width: 100%;
-    top:0;
+    top: 0;
     z-index: 1;
-    }
-
+  }
 }
 
 .win_container{
