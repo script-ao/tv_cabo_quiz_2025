@@ -1,6 +1,6 @@
 import React from "react";
 import world from "../../assets/images/svgs/icon/mundo.svg";
-import { Button } from "../../components";
+import { Button, Timer } from "../../components";
 import { useQuiz } from "../../context/quizContext";
 
 function Trivia() {
@@ -8,8 +8,8 @@ function Trivia() {
     currentQuestion, 
     handleAnswer, 
     progressPercentage, 
-    timeLeft,
-    isAnswered
+    isAnswered,
+    selectedOptionIndex
   } = useQuiz();
 
   // If no current question is available, show loading
@@ -33,15 +33,8 @@ function Trivia() {
     <React.Fragment>
       <section className="tr_wrapper">
         <main className="tr_container">
-          <div className="tr_progress-bar">
-            <div 
-              className="tr_progress-fill" 
-              style={{ width: `${progressPercentage}%` }}
-            ></div>
-          </div>
-
           <div className="tr_timer">
-            <span>{timeLeft}s</span>
+            <Timer />
           </div>
 
           <div className="tr_container_aw">
@@ -65,12 +58,14 @@ function Trivia() {
                     isAnswered
                       ? option.correct
                         ? 'btn_Light_corect'
-                        : 'btn_questions'
+                        : index === selectedOptionIndex && !option.correct
+                          ? 'btn_Light_incorrect'
+                          : 'btn_questions'
                       : 'btn_questions'
                   } 
                   key={index} 
                   text={option.answer}
-                  onClick={() => handleAnswer(option.correct)}
+                  onClick={() => handleAnswer(option.correct, index)}
                   disabled={isAnswered}
                 />
               ))}

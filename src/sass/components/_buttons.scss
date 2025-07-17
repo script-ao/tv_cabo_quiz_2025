@@ -10,24 +10,24 @@
 
   cursor: pointer;
 
-  
+
 }
 
 .btn span {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
   transform: translateY(2%);
-  
+
 
   color: #000;
 
- 
+
 }
 
 .btn_Light{ 
@@ -43,6 +43,20 @@
   border: none;
   color: #000;
   background: #60C8D8 ;
+  border-bottom-right-radius: 9rem;
+  border-top-right-radius: 9rem;
+  cursor: pointer;
+}
+
+.btn_Light_incorrect{
+  padding: 2rem 6rem;
+  box-shadow: 0 0 40px #ff4d4d;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+  background: #ff4d4d;
   border-bottom-right-radius: 9rem;
   border-top-right-radius: 9rem;
   cursor: pointer;

@@ -17,7 +17,7 @@ export const useQuiz = () => {
 // Quiz provider component
 export const QuizProvider = ({ children }) => {
   const navigate = useNavigate();
-  
+
   // State variables
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -27,12 +27,13 @@ export const QuizProvider = ({ children }) => {
   const [gameOver, setGameOver] = useState(false);
   const [timeLeft, setTimeLeft] = useState(30); // 30 seconds per question
   const [isAnswered, setIsAnswered] = useState(false);
-  
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+
   // Load categories on mount
   useEffect(() => {
     setCategories(getCategories());
   }, []);
-  
+
   // Load questions when category changes
   useEffect(() => {
     if (selectedCategory) {
@@ -46,65 +47,68 @@ export const QuizProvider = ({ children }) => {
     setTimeLeft(30);
     setIsAnswered(false);
   }, [selectedCategory]);
-  
+
   // Timer effect
   useEffect(() => {
     if (gameOver || isAnswered) return;
-    
+
     const timer = timeLeft > 0 && setInterval(() => {
       setTimeLeft(timeLeft - 1);
     }, 1000);
-    
+
     if (timeLeft === 0) {
       handleNextQuestion();
     }
-    
+
     return () => clearInterval(timer);
   }, [timeLeft, gameOver, isAnswered]);
-  
+
   // Get current question
   const currentQuestion = questions[currentQuestionIndex];
-  
+
   // Calculate progress percentage
   const progressPercentage = questions.length > 0 
     ? (currentQuestionIndex / questions.length) * 100 
     : 0;
-  
+
   // Handle answer selection
-  const handleAnswer = (isCorrect) => {
+  const handleAnswer = (isCorrect, optionIndex) => {
     if (isAnswered) return;
-    
+
     setIsAnswered(true);
-    
+    setSelectedOptionIndex(optionIndex);
+
     if (isCorrect) {
       setScore(score + 1);
+
+      // Wait 2 seconds before moving to next question
+      setTimeout(() => {
+        handleNextQuestion();
+      }, 2000);
+    } else {
+      // If answer is incorrect, navigate to lose screen after 2 seconds
+      setTimeout(() => {
+        navigate('/lose');
+      }, 2000);
     }
-    
-    // Wait 2 seconds before moving to next question
-    setTimeout(() => {
-      handleNextQuestion();
-    }, 2000);
   };
-  
+
   // Handle moving to next question
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setTimeLeft(30);
       setIsAnswered(false);
+      setSelectedOptionIndex(null);
     } else {
       // Game over
       setGameOver(true);
-      
-      // Navigate to win or lose screen
-      if (score / questions.length >= 0.6) { // Win if score is at least 60%
-        navigate('/win');
-      } else {
-        navigate('/lose');
-      }
+
+      // Navigate to win screen
+      navigate('/win');
     }
   };
-  
+
   // Start a new game
   const startNewGame = (category = null) => {
     setSelectedCategory(category);
@@ -113,9 +117,10 @@ export const QuizProvider = ({ children }) => {
     setGameOver(false);
     setTimeLeft(30);
     setIsAnswered(false);
+    setSelectedOptionIndex(null);
     navigate('/trivia');
   };
-  
+
   // Reset the game
   const resetGame = () => {
     setSelectedCategory(null);
@@ -124,9 +129,10 @@ export const QuizProvider = ({ children }) => {
     setGameOver(false);
     setTimeLeft(30);
     setIsAnswered(false);
+    setSelectedOptionIndex(null);
     navigate('/');
   };
-  
+
   // Context value
   const value = {
     questions,
@@ -138,12 +144,13 @@ export const QuizProvider = ({ children }) => {
     gameOver,
     timeLeft,
     isAnswered,
+    selectedOptionIndex,
     progressPercentage,
     handleAnswer,
     startNewGame,
     resetGame,
   };
-  
+
   return (
     <QuizContext.Provider value={value}>
       {children}
