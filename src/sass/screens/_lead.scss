@@ -1,4 +1,4 @@
-.re_wrapper{
+.le_wrapper{
    
    display: flex;
    align-items: center;
@@ -21,7 +21,7 @@
 
 }
 
-.re_container{
+.le_container{
     display: flex;
    align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
    
 }
 
-.re_highlight{
+.le_highlight{
      h2{
         color: #fff;
         font-weight: 900;
@@ -42,11 +42,11 @@
         line-height: 5.5rem;
     }
 }
-.re_form{
+.le_form{
     width: 50%;
     
 }
-.re_container_form{
+.le_container_form{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -54,7 +54,7 @@
 }
 
 
-.re_container_input{
+.le_container_input{
     display: flex;
     flex-direction: column;
     gap:1rem;
@@ -69,16 +69,21 @@
         }
     }
 
-    input{
+   select{
         padding: .8rem 1rem;
         border: none;
         outline: none;
         border-radius: 2rem;
         font-size: 1.5rem;
+        option{
+            font-size: 1.2rem;
+        }
     }
+
+    
 }
 
-.re_btn{
+.le_btn{
     display: flex;
     justify-content: center;
     align-items: center;

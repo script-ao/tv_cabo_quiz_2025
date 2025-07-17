@@ -71,3 +71,38 @@
     
 
 }
+
+
+@media (min-resolution: 2dppx){
+
+.ce_content{
+   
+    margin-top: 17rem;
+    margin-bottom: 9rem;
+}
+  
+.ce_description{
+    
+    
+    p{
+    font-size: 4rem;
+     line-height: 5rem;
+ 
+        
+    }
+}
+.ce_container_image{
+    
+    width: 40%;
+
+    img{
+        width: 100%;
+    }
+   
+}
+
+
+
+
+
+}

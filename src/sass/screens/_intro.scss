@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+
 .i_wrapper{
    
    display: flex;
@@ -25,14 +26,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:2rem;
+    gap:2.5rem;
     position: relative;
     z-index: 2;
 
     h2{
         color: #fff;
-        font-weight: bold;
+        font-weight: 900;
         font-size: 8rem;
+        line-height: 9rem;
         text-align: center;
         text-transform: uppercase;
     }
@@ -40,7 +42,8 @@
     p{
         text-align: center;
         font-size: 3rem;
-        font-weight: bold;
+        line-height: 4rem;
+        font-weight: 800;
         color: #fff;
         
     }

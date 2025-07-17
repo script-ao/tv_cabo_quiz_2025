@@ -7,3 +7,4 @@ export { Win } from './win'
 export { Lose } from './lose'
 export { Register } from './register'
 export { Certificate } from './certificate'
+export {Lead} from "./lead"
