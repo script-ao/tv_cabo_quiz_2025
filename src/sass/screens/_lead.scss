@@ -39,6 +39,7 @@
         font-weight: 900;
         font-size: 4.5rem;
         text-align: center;
+        text-transform: uppercase;
         line-height: 5.5rem;
     }
 }
@@ -70,15 +71,23 @@
     }
 
    select{
+        appearance: none;            
+       -webkit-appearance: none;    
+       -moz-appearance: none; 
         padding: .8rem 1rem;
         border: none;
         outline: none;
         border-radius: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         option{
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            
         }
+
+
     }
+
+ 
 
     
 }

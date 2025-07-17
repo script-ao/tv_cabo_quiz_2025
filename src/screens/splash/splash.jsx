@@ -20,7 +20,7 @@ function Splash() {
                 <div className="sp_img_subtitle">
                   <img src={tvcabo} alt="" />
                   <span className='sp_subtitle'>
-                  sempre ligado
+                  Sempre ligados.
                     </span>
                 </div>
                </div>

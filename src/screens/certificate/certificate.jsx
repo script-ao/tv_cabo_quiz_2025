@@ -2,6 +2,12 @@ import React from "react";
 import person from "../../assets/images/pessoa2.svg"
 import master from "../../assets/images/svgs/icon/master.svg"
 function Certificate() {
+
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+
+
+  console.log(user)
+  
   return (
     <React.Fragment>
        <section className="ce_wrapper">
