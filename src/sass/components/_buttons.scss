@@ -36,3 +36,31 @@
 
   
 } 
+
+.btn_Light_corect{
+   padding: 2rem 6rem;
+  background: #60C8D8 ;
+  box-shadow: 0 0 40px #60C8D8;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+   font-size: 2rem;
+ font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: none;
+}
+
+.btn_questions{
+  padding: 2rem 6rem;
+  background: #fff ;
+  box-shadow: 0 0 40px #60C8D8;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+   font-size: 2rem;
+ font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: none;
+}

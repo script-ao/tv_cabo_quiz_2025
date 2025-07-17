@@ -1,5 +1,6 @@
 import React from "react";
 import world from "../../assets/images/svgs/icon/mundo.svg"
+import {Button} from "../../components"
 function Trivia() {
 
   const respost = ["Internet Ilimitada", "Plano de tv", "Plano voz", "TvCabo Play"]
@@ -29,7 +30,7 @@ function Trivia() {
             </div>
 
             <div className="tr_resp">
-              {respost.map((item, index) => <button className="tr_btn_resp" key={index}>{item}</button>)}
+              {respost.map((item, index) => <Button className={index === 0 ?' btn_Light_corect' :'btn_questions'} key={index} text={item}/>)}
             </div>
           </div>
         </main>
