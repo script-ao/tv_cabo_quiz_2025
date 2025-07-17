@@ -1,0 +1,38 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 6rem;
+  border: none;
+  border-radius: 5rem;
+   cursor: pointer;
+
+  
+}
+
+.btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  font-size: 2rem;
+ 
+  text-transform: uppercase;
+  color: #000;
+  transform: translateY(2%);
+  font-weight: bold;
+
+ 
+}
+
+.btn_Light{
+  
+  
+
+  
+  box-shadow: 0 0 40px #60C8D8;
+
+  
+} 
