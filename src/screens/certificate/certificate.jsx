@@ -46,7 +46,7 @@ const dataFormatada = `${dia} de ${mesNome} de  ${ano}`
                
                <div className="ce_description">
                   <h2>A TV CABO </h2>
-                  <h3>Certifica que o mundo de:</h3>
+                  <h3>Certifica que o mundo de</h3>
 
                </div>
                   <div className="ce_inf">

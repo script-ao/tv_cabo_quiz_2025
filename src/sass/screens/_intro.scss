@@ -48,3 +48,33 @@
         
     }
 }
+
+@media (max-width: 3840px){
+    .i_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:8rem;
+    position: relative;
+    z-index: 2;
+
+    h2{
+        color: #fff;
+        font-weight: 900;
+        font-size: 16rem;
+        line-height: 16rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    p{
+        text-align: center;
+        font-size: 8rem;
+        line-height: 12rem;
+        font-weight: 800;
+        color: #fff;
+        
+    }
+}
+
+}
