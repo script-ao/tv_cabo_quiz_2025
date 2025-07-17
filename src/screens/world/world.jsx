@@ -34,7 +34,7 @@ function World() {
       icon: musica,
     },
     {
-      name: "startups_inovacao",
+      name: "startups_inovação",
       icon: cup,
     },
   ];
