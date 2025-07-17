@@ -36,9 +36,10 @@
 .re_highlight{
      h2{
         color: #fff;
-        font-weight: bold;
+        font-weight: 900;
         font-size: 4.5rem;
         text-align: center;
+        line-height: 5.5rem;
     }
 }
 .re_form{
@@ -69,7 +70,7 @@
     }
 
     input{
-        padding: .6rem 1rem;
+        padding: .8rem 1rem;
         border: none;
         outline: none;
         border-radius: 2rem;

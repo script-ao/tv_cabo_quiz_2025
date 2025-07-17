@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .sp_wrapper{
     flex:1;
    
@@ -24,14 +26,12 @@
 .sp_container{
     display: flex;
     justify-content: space-between;
-   
-    //align-items: center;
     position: relative;
-    z-index: 2;
+
+    padding: 0 4rem;
     height: 100%;
     width: 100%;
-    //background: blue;
-    padding: 0 4rem;
+    z-index: 2;
 }
 
 .sp_content{
@@ -47,7 +47,8 @@
     text-transform: uppercase;
     line-height: 13rem;
     color:#ffff;
-    font-weight:bold ;
+    font-weight: 900;
+ 
    p:first-child{
     font-size: 18rem;
    }
@@ -95,5 +96,45 @@
     display: flex;
     justify-content: end;
     
+
+}
+
+@media (min-resolution: 2dppx){
+
+.sp_content{
+   
+    margin-top: 17rem;
+    margin-bottom: 9rem;
+}
+  .sp_highlight{
+    
+    line-height: 12rem;
+   
+   
+ 
+   p:first-child{
+    font-size: 13rem;
+   }
+
+   p:last-child{
+    font-size:6rem;
+   }
+
+   
+}
+
+.sp_img_subtitle{
+    
+    width: 40%;
+
+    img{
+        width: 100%;
+    }
+   
+}
+
+
+
+
 
 }

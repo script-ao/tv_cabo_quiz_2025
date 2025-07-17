@@ -10,6 +10,7 @@ import {
   Lose,
   Register,
   Certificate,
+  Lead
 } from "../../screens";
 import { AppLayout } from "../../layouts";
 
@@ -20,6 +21,7 @@ function AppRouter() {
         <Route element={<AppLayout />}>
         <Route index path="/" element={<Splash />}/>
         <Route path="/start" element={<Start />}/>
+        <Route path="/lead" element={<Lead />}/>
         <Route path="/intro" element={<Intro />}/>
         <Route path="/world" element={<World />}/>
         <Route path="/trivia" element={<Trivia />}/>
