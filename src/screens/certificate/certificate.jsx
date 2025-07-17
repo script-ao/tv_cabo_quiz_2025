@@ -5,7 +5,15 @@ function Certificate() {
 
   const user = JSON.parse(localStorage.getItem('user')) || '';
   const navigate= useNavigate()
-
+  const hoje = new Date();
+  const meses = [
+  'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+  'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
+];
+const dia = hoje.getDate();
+const mesNome = meses[hoje.getMonth()];
+const ano = hoje.getFullYear();
+const dataFormatada = `${dia} de ${mesNome} de  ${ano}`
 
    /*useEffect(() => {
       if(!user){
@@ -14,14 +22,14 @@ function Certificate() {
    },[user, navigate])*/
 
 
-  useEffect(() => {
+  /*useEffect(() => {
     const time = setTimeout(() =>{
       localStorage.clear()
       navigate("/")
     }, 10000)
 
     return () => clearTimeout(time)
-  },[navigate])
+  },[navigate])*/
   
   
   return (
@@ -50,7 +58,7 @@ function Certificate() {
                     <h4>TEM FIBRA.</h4>
 
                     <div className="ce_date">
-                      <span>Data:</span>
+                      <span>Data: {dataFormatada}</span>
 
                     </div>
                       <div className="ce_assin"></div>

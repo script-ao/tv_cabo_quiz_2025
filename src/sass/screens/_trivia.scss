@@ -1,49 +1,43 @@
-.tr_wrapper{
-    flex:1;
+.tr_wrapper {
+    flex: 1;
 
     position: relative;
     background: url("../assets/images/svgs/backgrounds/FUNDO_CAMPANHA_300MB_TVC_2025.svg") no-repeat;
     background-size: cover;
     height: 100svh;
     font-family: "Poppins";
-    overflow:hidden;
+    overflow: hidden;
     //padding: 0 2rem;
 
-    &::after{
-        content: '';
-        background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
+    &::after {
+        content: "";
+        background: linear-gradient(to bottom, #081435 0%, #1c2252 100%);
         opacity: 0.9;
         position: absolute;
         height: 100svh;
         width: 100%;
-        top:0;
+        top: 0;
         z-index: 1;
     }
 }
 
-
-.tr_container{
+.tr_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:2rem;
+    gap: 2rem;
     height: 100%;
     position: relative;
     z-index: 2;
     padding: 2rem 2rem;
-
 }
 
 .tr_timer {
     width: 90%;
-    
-    
-    
 }
 
-
-.tr_container_aw{
+.tr_container_aw {
     display: flex;
     justify-content: center;
 
@@ -51,16 +45,15 @@
     padding: 0 6rem;
 }
 
-.tr_container_questions{
+.tr_container_questions {
     background-color: #081435;
     padding: 2rem 5rem;
     width: 50%;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-
 }
 
-.tr_word{
+.tr_word {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,8 +62,8 @@
     margin-bottom: 1.5rem;
 }
 
-.tr_separation{
-    height: .5rem;
+.tr_separation {
+    height: 0.5rem;
     background: #fff;
     width: 45%;
     border-radius: 5rem;
@@ -78,37 +71,73 @@
     margin-left: 5rem;
 }
 
-
-.tr_world_img{
+.tr_world_img {
     display: flex;
     justify-content: center;
-    img{
+    img {
         width: 70%;
     }
-
 }
 
-
-
-
-
-.tr_questions{
-width: 100%;
-    p{
+.tr_questions {
+    width: 100%;
+    p {
         font-size: 2rem;
         color: #fff;
         text-align: center;
         line-height: 4rem;
         font-weight: 800;
-
     }
 }
 
-.tr_resp{
+.tr_resp {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     gap: 4rem;
-    width: 50%;   
+    width: 50%;
+}
+
+@media (max-width: 3840px) {
+    .tr_questions {
+        width: 100%;
+        p {
+            font-size: 8rem;
+
+            line-height: 14rem;
+            font-weight: 800;
+        }
+    }
+
+    .tr_timer {
+        width: 95%;
+    }
+    .tr_world_img {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+        }
+    }
+    .tr_container_questions {
+    background-color: #081435;
+    padding: 8rem 10rem;
+    width: 50%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+    .tr_word{
+   padding: 1rem;
+    margin-bottom: 7rem;
+}
+
+    .tr_separation {
+        height: 2rem;
+        background: #fff;
+        width: 27%;
+        border-radius: 5rem;
+        margin-top: 9rem;
+        margin-left: 5rem;
+    }
 }

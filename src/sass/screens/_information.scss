@@ -72,7 +72,40 @@
 
 }
 
+@media (max-width: 3840px) {
 
+    .inf_content{
+    
+    
+    margin-top: 30rem;
+    
+}
+
+.inf_container_image{
+   
+    
+    
+    
+    img{
+        width: 100%;
+    }
+}
+
+.inf_description{
+    margin-left: 10rem;
+    
+    p{
+        font-size: 12rem;
+        color:#fff;
+        font-weight: semibold;
+        line-height: 16rem;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+}
 @media (min-resolution: 2dppx){
 
 .inf_content{
@@ -82,7 +115,6 @@
 }
   
 .inf_description{
-    
     
     p{
     font-size: 4rem;

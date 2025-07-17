@@ -79,3 +79,25 @@
   border: none;
   width: 100%;
 }
+
+
+@media (max-width: 3840px){
+  .btn{
+    padding: 8rem 14rem;
+    border-radius: 20rem;
+  }
+
+  .btn span{
+    font-size: 6rem;
+  }
+
+  .btn_Light_corect{
+    padding: 8rem 14rem;
+     font-size: 6rem;
+  }
+
+  .btn_questions{
+    padding: 8rem 14rem;
+     font-size: 6rem;
+  }
+}
