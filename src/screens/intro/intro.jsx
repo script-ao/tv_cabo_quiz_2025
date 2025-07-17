@@ -8,7 +8,7 @@ function Intro() {
         <main className="i_container">
           <h2>Bem-vindo ao <br/>universo  da TVCABO</h2>
           <p>Testa os teus conhecimentos.<br/> Mostra que a tua fibra é o teu mundo<br/> e ganha prémios com a TVCABO.</p>
-          <Link to="/start">
+          <Link to="/world">
                <Button text="AVANÇAR" className="btn btn_Light" /> 
             </Link>
         </main>

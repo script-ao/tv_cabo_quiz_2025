@@ -1,37 +1,67 @@
 import React from "react";
+import comanndo from "../../assets/images/svgs/icon/comando.svg";
+import filme from "../../assets/images/svgs/icon/filme.svg";
+import social from "../../assets/images/svgs/icon/social.svg";
+import desporto from "../../assets/images/svgs/icon/desporto.svg";
+import musica from "../../assets/images/svgs/icon/musica.svg";
+import cup from "../../assets/images/svgs/icon/cup.svg";
+import { useNavigate } from "react-router-dom";
 import { useQuiz } from "../../context/quizContext";
-import { Button } from "../../components";
 
 function World() {
-  const { categories, startNewGame } = useQuiz();
+  const navigate = useNavigate();
+  const { startNewGame } = useQuiz();
+
+  const itemns_btn = [
+    {
+      name: "games",
+      icon: comanndo,
+    },
+    {
+      name: "filme",
+      icon: filme,
+    },
+    {
+      name: "redes_sociais",
+      icon: social,
+    },
+    {
+      name: "desporto",
+      icon: desporto,
+    },
+    {
+      name: "musica",
+      icon: musica,
+    },
+    {
+      name: "startups_inovacao",
+      icon: cup,
+    },
+  ];
+
+  const handleCategorySelect = (category) => {
+    startNewGame(category);
+    navigate('/trivia');
+  };
 
   return (
     <React.Fragment>
-      <section className="world_wrapper">
-        <main className="world_container">
-          <div className="world_header">
-            <h1>Escolha uma categoria</h1>
-            <p>Selecione uma categoria para começar o quiz</p>
-          </div>
-
-          <div className="world_categories">
-            {categories.map((category, index) => (
-              <div key={index} className="world_category">
-                <Button 
-                  className="btn_category" 
-                  text={category.charAt(0).toUpperCase() + category.slice(1).replace(/_/g, ' ')} 
-                  onClick={() => startNewGame(category)}
-                />
-              </div>
+      <section className="st_wrapper">
+        <main className="st_container_content">
+          <h1 className="st__highlight">
+            Qual é o <br />
+            teu Mundo
+          </h1>
+          <div className="st_container_btn">
+            {itemns_btn.map((item, index) => (
+              <button 
+                key={index} 
+                onClick={() => handleCategorySelect(item.name)}
+              >
+                <img src={item.icon} alt="" />
+                <span>{item.name.replace('_', ' ')}</span>
+              </button>
             ))}
-
-            <div className="world_category">
-              <Button 
-                className="btn_category btn_category_all" 
-                text="Todas as categorias" 
-                onClick={() => startNewGame()}
-              />
-            </div>
           </div>
         </main>
       </section>

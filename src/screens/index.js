@@ -1,4 +1,3 @@
-export { Splash } from './splash'
 export { Start } from './start'
 export { Intro } from './intro'
 export { World } from './world'
@@ -7,3 +6,4 @@ export { Win } from './win'
 export { Lose } from './lose'
 export { Register } from './register'
 export { Certificate } from './certificate'
+export {Lead} from "./lead"
