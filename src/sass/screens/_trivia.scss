@@ -38,18 +38,8 @@
 .tr_timer {
     width: 100%;
     padding: 0 2rem;
-    margin-bottom: -2rem;
-    z-index: 3;
-}
-.tr_progress-bar {
-  width: 92%;
-
-  background-color: #fff;
-  border-radius: 9999px;
-
-  padding: 1rem;
-
-
+    z-index: 5;
+    height: 100px;
 }
 
 .tr_progress-fill {
