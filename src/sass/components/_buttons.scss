@@ -6,6 +6,7 @@
   padding: 2rem 6rem;
   border: none;
   border-radius: 5rem;
+   cursor: pointer;
 
   
 }
@@ -17,22 +18,20 @@
   line-height: 1;
 
   font-size: 2rem;
-  font-family: "Aux Next";
+ 
   text-transform: uppercase;
   color: #000;
   transform: translateY(2%);
+  font-weight: bold;
+
+ 
 }
 
 .btn_Light{
-    position: relative;
-  display: inline-block;
   
-  font-size: 1.6rem;
   
-  border: none;
+
   
-  overflow: hidden;
-  cursor: pointer;
   box-shadow: 0 0 40px #60C8D8;
 
   
