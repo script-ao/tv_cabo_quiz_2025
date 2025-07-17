@@ -23,11 +23,13 @@ function Timer() {
 
   return (
     <div className="timer-container">
+     
       <div
         className="timer-progress-bar"
         style={{
           width: `${percentageLeft}%`,
           backgroundColor: getBarColor(),
+           
         }}
       />
     </div>

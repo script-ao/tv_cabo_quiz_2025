@@ -7,11 +7,11 @@ function Certificate() {
   const navigate= useNavigate()
 
 
-   useEffect(() => {
+   /*useEffect(() => {
       if(!user){
         navigate("/")
       }
-   },[user, navigate])
+   },[user, navigate])*/
 
 
   useEffect(() => {
