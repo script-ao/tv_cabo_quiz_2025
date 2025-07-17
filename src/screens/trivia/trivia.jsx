@@ -7,12 +7,11 @@ function Trivia() {
   const { 
     currentQuestion, 
     handleAnswer, 
-    progressPercentage, 
     isAnswered,
     selectedOptionIndex
   } = useQuiz();
 
-  // If no current question is available, show loading
+  // Se não houver pergunta atual, mostra uma mensagem de carregamento.
   if (!currentQuestion) {
     return (
       <React.Fragment>
@@ -34,6 +33,7 @@ function Trivia() {
       <section className="tr_wrapper">
         <main className="tr_container">
           <div className="tr_timer">
+            {/* O Timer agora funciona automaticamente com base no contexto */}
             <Timer />
           </div>
 
