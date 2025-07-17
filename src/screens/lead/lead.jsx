@@ -53,7 +53,7 @@ function Lead() {
         //navigate("/intro");
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
-        
+        setOpenMordal(true)
         setvalueMordal(
           {
             className:"btn_warn",
@@ -64,7 +64,7 @@ function Lead() {
       }
     } catch (error) {
       console.error("Erro de rede:", error);
-      alert("Ocorreu um erro de rede. Verifique sua conexão e tente novamente.");
+      setOpenMordal(true)
       setvalueMordal(
           {
             className:"btn_warn",
