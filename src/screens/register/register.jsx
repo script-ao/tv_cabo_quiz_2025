@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import {Button} from "../../components"
 function Register() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   return (
     <React.Fragment>
       <section className="re_wrapper">

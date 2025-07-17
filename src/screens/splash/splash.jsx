@@ -26,7 +26,7 @@ function Splash() {
                </div>
 
                <div className='sp_btn'>
-                <Link to="/intro">
+                <Link to="/lead">
                 <Button text="INICIAR" className="btn btn_Light" /> 
               </Link>
                </div>
