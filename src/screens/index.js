@@ -1,4 +1,3 @@
-export { Splash } from './splash'
 export { Start } from './start'
 export { Intro } from './intro'
 export { World } from './world'
