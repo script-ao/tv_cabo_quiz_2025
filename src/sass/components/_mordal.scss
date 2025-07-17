@@ -1,0 +1,53 @@
+.mo_wrapper{
+    position: absolute;
+    top:25%;
+    background: #081435bd;
+    border-radius: 2rem;
+    padding: 2rem;
+    z-index: 100;
+    width: 40%;
+    height: 50%;
+}
+
+.mo_container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+
+    span{
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    
+}
+
+.btn_warn{
+    padding: 1rem;
+    border-radius: .8rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.6rem;
+    background: #D22027;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn_sucess{
+    padding: 1rem;
+    border-radius: .8rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.6rem;
+    background: green;
+    color: #fff;
+    font-weight: bold;
+}
