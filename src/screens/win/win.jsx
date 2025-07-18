@@ -1,22 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../components";
 import { useQuiz } from "../../context/quizContext";
 
 function Win() {
   const { score, questions, resetGame, startNewGame } = useQuiz();
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/register");
+  }
 
   return (
     <React.Fragment>
       <section className="win_wrapper">
         <main className="win_container">
           <p>PARABÉNS</p>
-          <h2>Venceste <br/> O JOGO</h2>
+          <h2>
+            Venceste <br /> O JOGO
+          </h2>
 
           <div className="win_buttons">
-            <Link to="/register">
-              <Button text="Receber Prémio" className="btn btn_Light" /> 
-            </Link>
+            <Button
+              text="Receber Prémio"
+              className="btn btn_Light"
+              onClick={handleClick}
+            />
           </div>
         </main>
       </section>

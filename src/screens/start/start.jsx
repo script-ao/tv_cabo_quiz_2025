@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import person from "../../assets/images/pessoasss1.svg";
 import tvcabo from "../../assets/images/svgs/logo/tvcabo.svg";
 import { Link } from "react-router-dom";
 import { Button } from "../../components";
 
 function Start() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/lead");
+  }
+
   return (
     <React.Fragment>
       <section className="sp_wrapper">
@@ -23,10 +30,12 @@ function Start() {
               </div>
             </div>
 
-               <div className='sp_btn'>
-                <Link to="/lead">
-                <Button text="INICIAR" className="btn btn_Light" /> 
-              </Link>
+            <div className="sp_btn">
+              <Button
+                text="INICIAR"
+                className="btn btn_Light"
+                onClick={handleClick}
+              />
             </div>
           </div>
 
