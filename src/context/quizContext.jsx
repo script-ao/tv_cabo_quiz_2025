@@ -27,6 +27,7 @@ export const QuizProvider = ({ children }) => {
   const [timeLeft, setTimeLeft] = useState(30); // 30 seconds per question
   const [isAnswered, setIsAnswered] = useState(false);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [isGameActive, setIsGameActive] = useState(false);
 
   // Load categories on mount
   useEffect(() => {
@@ -48,7 +49,7 @@ export const QuizProvider = ({ children }) => {
 
   // Timer effect
   useEffect(() => {
-    if (gameOver || isAnswered) return;
+    if (gameOver || isAnswered || !isGameActive) return;
 
     const timer = timeLeft > 0 && setInterval(() => {
       setTimeLeft(timeLeft - 1);
@@ -61,7 +62,7 @@ export const QuizProvider = ({ children }) => {
     }
 
     return () => clearInterval(timer);
-  }, [timeLeft, gameOver, isAnswered, navigate]);
+  }, [timeLeft, gameOver, isAnswered, isGameActive, navigate]);
 
   // Get current question
   const currentQuestion = questions[currentQuestionIndex];
@@ -115,6 +116,7 @@ export const QuizProvider = ({ children }) => {
     setTimeLeft(30);
     setIsAnswered(false);
     setSelectedOptionIndex(null);
+    setIsGameActive(true);
     navigate('/trivia');
   };
 
@@ -126,6 +128,7 @@ export const QuizProvider = ({ children }) => {
     setTimeLeft(30);
     setIsAnswered(false);
     setSelectedOptionIndex(null);
+    setIsGameActive(false);
     navigate('/');
   };
 
@@ -141,6 +144,7 @@ export const QuizProvider = ({ children }) => {
     isAnswered,
     selectedOptionIndex,
     progressPercentage,
+    isGameActive,
     handleAnswer,
     startNewGame,
     resetGame,
