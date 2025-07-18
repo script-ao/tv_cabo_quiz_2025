@@ -1,7 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import {Button} from "../../components"
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../components";
 function Intro() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/world");
+  }
   return (
     <React.Fragment>
       <section className="i_wrapper">
