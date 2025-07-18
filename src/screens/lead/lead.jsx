@@ -1,18 +1,27 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../components";
+import { Button, Mordal } from "../../components";
+
 
 function Lead() {
   const [ageRange, setAgeRange] = useState("");
   const [isClient, setIsClient] = useState("");
   const [residence, setResidence] = useState("");
+   const [OpenMordal, setOpenMordal] = useState(false);
+    const [valueMordal, setvalueMordal] = useState({});
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!ageRange || !isClient || !residence) {
-      alert("Por favor, preencha todos os campos obrigatórios.");
+     setOpenMordal(true)
+      setvalueMordal(
+          {
+            className:"btn_warn",
+            text:"Preenche o formulario."
+          }
+        )
       return;
     }
 
@@ -33,24 +42,51 @@ function Lead() {
 
       if (response.ok) {
         console.log("Formulário enviado com sucesso!");
-        alert("Obrigado por preencher!");
-        navigate("/intro");
+        setOpenMordal(true)
+        setvalueMordal(
+          {
+            className:"btn_sucess",
+            text:"Obrigado por preencher",
+            to: "/intro"
+          }
+        )
+        //navigate("/intro");
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
-        alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
+        setOpenMordal(true)
+        setvalueMordal(
+          {
+            className:"btn_warn",
+            text:"Ocorreu um erro ao enviar o formulário. Tente novamente.",
+            to: ""
+          }
+        )
       }
     } catch (error) {
       console.error("Erro de rede:", error);
-      alert("Ocorreu um erro de rede. Verifique sua conexão e tente novamente.");
+      setOpenMordal(true)
+      setvalueMordal(
+          {
+            className:"btn_warn",
+            text:"Ocorreu um erro de rede. Verifique sua conexão e tente novamente.",
+            to: ""
+          }
+        )
     }
   };
 
   return (
     <React.Fragment>
       <section className="le_wrapper">
+        {OpenMordal && <Mordal 
+        text={valueMordal.text}
+        setOpenMordal={setOpenMordal}
+        className={valueMordal.className}
+        to={valueMordal.to}
+        />}
         <main className="le_container">
           <div className="le_highlight">
-            <h2>PREENCHE <br/>O FORMULÁRIO </h2>
+            <h2>Responde <br/>O FORMULÁRIO </h2>
           </div>
 
           <form className="le_form" onSubmit={handleSubmit}>
@@ -106,7 +142,7 @@ function Lead() {
               </div>
             </div>
             <div className="le_btn">
-              <Button text="ENVIAR" className="btn" type="submit" />
+              <Button text="ENVIAR" className="btn btn_Light" type="submit" />
             </div>
           </form>
         </main>

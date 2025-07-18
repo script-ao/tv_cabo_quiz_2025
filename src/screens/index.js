@@ -5,5 +5,6 @@ export { Trivia } from './trivia'
 export { Win } from './win'
 export { Lose } from './lose'
 export { Register } from './register'
+export { Infomation } from './information'
 export { Certificate } from './certificate'
 export {Lead} from "./lead"

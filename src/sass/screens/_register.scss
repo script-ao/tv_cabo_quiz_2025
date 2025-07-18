@@ -83,3 +83,62 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@media (max-width: 3840px){
+
+    .re_container{
+    
+    gap: 8rem;
+   
+}
+    .re_highlight{
+     h2{
+      
+        font-size: 10rem;
+        
+        line-height: 12rem;
+    }
+}
+
+.re_container_form{
+   
+    gap: 8rem;
+    margin-bottom: 8rem;
+}
+
+.re_container_input{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+
+    label{
+        font-size: 6rem;
+        color: #fff;
+        font-weight: bold;
+
+        span{
+            color: #1FB1D0;
+        }
+    }
+
+   input{
+      
+        padding: 4rem 5rem;
+       
+        border-radius: 8rem;
+        font-size: 7rem;
+        option{
+            font-size: 4rem;
+            
+        }
+
+
+    }
+
+ 
+
+    
+}
+
+}

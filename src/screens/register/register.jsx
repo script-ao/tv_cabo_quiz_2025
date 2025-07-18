@@ -1,16 +1,26 @@
 import React, { useState } from "react";
-import { Button } from "../../components";
+import { Button, Mordal } from "../../components";
 
 function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+   const [OpenMordal, setOpenMordal] = useState(false);
+    const [valueMordal, setvalueMordal] = useState({});
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!name || !email || !phone) {
-      alert("Por favor, preencha todos os campos obrigatórios.");
+     
+
+      setOpenMordal(true)
+      setvalueMordal(
+          {
+            className:"btn_warn",
+            text:"Por favor, preencha todos os campos obrigatórios."
+          }
+        )
       return;
     }
 
@@ -31,21 +41,48 @@ function Register() {
 
       if (response.ok) {
         console.log("Formulário enviado com sucesso!");
-        alert("Obrigado por se registrar!");
-        // Se precisar de navegação aqui, pode ser adicionado mais tarde.
+        
+       setOpenMordal(true)
+        setvalueMordal(
+          {
+            className:"btn_sucess",
+            text:"Obrigado por se registrar!",
+            to: "/intro"
+          }
+        )
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
-        alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
+       setOpenMordal(true)
+        setvalueMordal(
+          {
+            className:"btn_warn",
+            text:"Ocorreu um erro ao enviar o formulário. Tente novamente.",
+            to: ""
+          }
+        )
       }
     } catch (error) {
       console.error("Erro de rede:", error);
-      alert("Ocorreu um erro de rede. Verifique sua conexão e tente novamente.");
+     setOpenMordal(true)
+      setvalueMordal(
+          {
+            className:"btn_warn",
+            text:"Ocorreu um erro de rede. Verifique sua conexão e tente novamente.",
+            to: ""
+          }
+        )
     }
   };
 
   return (
     <React.Fragment>
       <section className="re_wrapper">
+         {OpenMordal && <Mordal 
+                text={valueMordal.text}
+                setOpenMordal={setOpenMordal}
+                className={valueMordal.className}
+                to={valueMordal.to}
+                />}
         <main className="re_container">
           <div className="re_highlight">
             <h2>PREENCHE <br/>O FORMULÁRIO </h2>
@@ -85,7 +122,7 @@ function Register() {
               </div>
             </div>
             <div className="re_btn">
-              <Button text="ENVIAR" className="btn" type="submit" />
+              <Button text="ENVIAR" className="btn btn_Light" type="submit" />
             </div>
           </form>
         </main>

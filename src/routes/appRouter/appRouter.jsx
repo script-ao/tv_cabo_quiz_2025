@@ -11,6 +11,7 @@ import {
   Register,
   Certificate,
   Lead,
+  Infomation
 } from "../../screens";
 import { AppLayout } from "../../layouts";
 
@@ -29,6 +30,7 @@ function AppRouter() {
             <Route path="/lose" element={<Lose />} />
             <Route path="/register" element={<Register />} />
             <Route path="/certificate" element={<Certificate />} />
+            <Route path="/information" element={<Infomation />} />
           </Route>
         </Routes>
       </QuizProvider>
