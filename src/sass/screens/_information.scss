@@ -73,7 +73,10 @@
 }
 
 @media (min-width: 3840px) {
-
+    .inf_container{
+   
+    padding: 0 8rem;
+}
     .inf_content{
     
     
@@ -93,7 +96,7 @@
 
 .inf_description{
    
-    
+    margin-top: 4rem;
     p{
         font-size: 12rem;
         color:#fff;
@@ -107,6 +110,9 @@
 
 }
 @media (min-resolution: 2dppx){
+
+
+
 
 .inf_content{
    
