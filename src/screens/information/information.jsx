@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import person from "../../assets/images/pessoa2.svg";
-import master from "../../assets/images/svgs/icon/master.svg";
+import master from "../../assets/images/svgs/logo/tvcabo.svg";
 
 function Infomation() {
   const navigate = useNavigate();
