@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Mordal } from "../../components";
+import { Button, Modal } from "../../components";
 
 
 function Lead() {
   const [ageRange, setAgeRange] = useState("");
   const [isClient, setIsClient] = useState("");
   const [residence, setResidence] = useState("");
-  const [OpenMordal, setOpenMordal] = useState(false);
-  const [valueMordal, setvalueMordal] = useState({});
+  const [OpenModal, setOpenModal] = useState(false);
+  const [valueModal, setvalueModal] = useState({});
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!ageRange || !isClient || !residence) {
-     setOpenMordal(true)
-      setvalueMordal(
-          {
-            className:"btn_warn",
-            text:"Preenche o formulario."
-          }
-        )
+      setOpenModal(true)
+      setvalueModal(
+        {
+          className: "btn_warn",
+          text: "Preenche o formulario."
+        }
+      )
       return;
     }
 
@@ -42,61 +42,61 @@ function Lead() {
 
       if (response.ok) {
         console.log("Formulário enviado com sucesso!");
-        setOpenMordal(true)
-        setvalueMordal(
+        setOpenModal(true)
+        setvalueModal(
           {
-            className:"btn_sucess",
-            text:"Obrigado por preencher",
+            className: "btn_sucess",
+            text: "Obrigado por preencher",
             to: "/intro"
           }
         )
         //navigate("/intro");
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
-        setOpenMordal(true)
-        setvalueMordal(
+        setOpenModal(true)
+        setvalueModal(
           {
-            className:"btn_warn",
-            text:"Ocorreu um erro ao enviar o formulário. Tente novamente.",
+            className: "btn_warn",
+            text: "Ocorreu um erro ao enviar o formulário. Tente novamente.",
             to: ""
           }
         )
       }
     } catch (error) {
       console.error("Erro de rede:", error);
-      setOpenMordal(true)
-      setvalueMordal(
-          {
-            className:"btn_warn",
-            text:"Ocorreu um erro de rede. Verifique sua conexão e tente novamente.",
-            to: ""
-          }
-        )
+      setOpenModal(true)
+      setvalueModal(
+        {
+          className: "btn_warn",
+          text: "Ocorreu um erro de rede. Verifique sua conexão e tente novamente.",
+          to: ""
+        }
+      )
     }
   };
 
   return (
     <React.Fragment>
       <section className="le_wrapper">
-        {OpenMordal && <Mordal 
-        text={valueMordal.text}
-        setOpenMordal={setOpenMordal}
-        className={valueMordal.className}
-        to={valueMordal.to}
+        {OpenModal && <Modal
+          text={valueModal.text}
+          setOpenModal={setOpenModal}
+          className={valueModal.className}
+          to={valueModal.to}
         />}
         <main className="le_container">
           <div className="le_highlight">
-            <h2>Responde <br/>O FORMULÁRIO </h2>
+            <h2>Responde <br />O FORMULÁRIO </h2>
           </div>
 
           <form className="le_form" onSubmit={handleSubmit}>
             <div className="le_container_form">
               <div className="le_container_input">
                 <label htmlFor="age_range_input">Qual é a sua faixa etária: <span>*</span></label>
-                <select 
-                  id="age_range_input" 
-                  name="ageRange" 
-                  value={ageRange} 
+                <select
+                  id="age_range_input"
+                  name="ageRange"
+                  value={ageRange}
                   onChange={(e) => setAgeRange(e.target.value)}
                   required
                 >
@@ -110,10 +110,10 @@ function Lead() {
               </div>
               <div className="le_container_input">
                 <label htmlFor="is_client_input">És cliente tvcabo?: <span>*</span></label>
-                <select 
-                  id="is_client_input" 
-                  name="isClient" 
-                  value={isClient} 
+                <select
+                  id="is_client_input"
+                  name="isClient"
+                  value={isClient}
                   onChange={(e) => setIsClient(e.target.value)}
                   required
                 >
@@ -125,10 +125,10 @@ function Lead() {
               </div>
               <div className="le_container_input">
                 <label htmlFor="residence_input">Qual é sua area de residencia? <span>*</span></label>
-                <select 
-                  id="residence_input" 
-                  name="residence" 
-                  value={residence} 
+                <select
+                  id="residence_input"
+                  name="residence"
+                  value={residence}
                   onChange={(e) => setResidence(e.target.value)}
                   required
                 >

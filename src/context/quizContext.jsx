@@ -21,13 +21,13 @@ export const QuizProvider = ({ children }) => {
   // State variables
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
   const [gameOver, setGameOver] = useState(false);
   const [timeLeft, setTimeLeft] = useState(30); // 30 seconds per question
   const [isAnswered, setIsAnswered] = useState(false);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [isGameActive, setIsGameActive] = useState(false);
 
   // Load categories on mount
   useEffect(() => {
@@ -42,7 +42,6 @@ export const QuizProvider = ({ children }) => {
       setQuestions(getAllQuestions());
     }
     setCurrentQuestionIndex(0);
-    setScore(0);
     setGameOver(false);
     setTimeLeft(30);
     setIsAnswered(false);
@@ -50,18 +49,20 @@ export const QuizProvider = ({ children }) => {
 
   // Timer effect
   useEffect(() => {
-    if (gameOver || isAnswered) return;
+    if (gameOver || isAnswered || !isGameActive) return;
 
     const timer = timeLeft > 0 && setInterval(() => {
       setTimeLeft(timeLeft - 1);
     }, 1000);
 
     if (timeLeft === 0) {
-      handleNextQuestion();
+      // If time runs out, end the game and navigate to lose screen
+      setGameOver(true);
+      navigate('/lose');
     }
 
     return () => clearInterval(timer);
-  }, [timeLeft, gameOver, isAnswered]);
+  }, [timeLeft, gameOver, isAnswered, isGameActive, navigate]);
 
   // Get current question
   const currentQuestion = questions[currentQuestionIndex];
@@ -79,8 +80,6 @@ export const QuizProvider = ({ children }) => {
     setSelectedOptionIndex(optionIndex);
 
     if (isCorrect) {
-      setScore(score + 1);
-
       // Wait 2 seconds before moving to next question
       setTimeout(() => {
         handleNextQuestion();
@@ -113,11 +112,11 @@ export const QuizProvider = ({ children }) => {
   const startNewGame = (category = null) => {
     setSelectedCategory(category);
     setCurrentQuestionIndex(0);
-    setScore(0);
     setGameOver(false);
     setTimeLeft(30);
     setIsAnswered(false);
     setSelectedOptionIndex(null);
+    setIsGameActive(true);
     navigate('/trivia');
   };
 
@@ -125,11 +124,11 @@ export const QuizProvider = ({ children }) => {
   const resetGame = () => {
     setSelectedCategory(null);
     setCurrentQuestionIndex(0);
-    setScore(0);
     setGameOver(false);
     setTimeLeft(30);
     setIsAnswered(false);
     setSelectedOptionIndex(null);
+    setIsGameActive(false);
     navigate('/');
   };
 
@@ -138,7 +137,6 @@ export const QuizProvider = ({ children }) => {
     questions,
     currentQuestion,
     currentQuestionIndex,
-    score,
     selectedCategory,
     categories,
     gameOver,
@@ -146,6 +144,7 @@ export const QuizProvider = ({ children }) => {
     isAnswered,
     selectedOptionIndex,
     progressPercentage,
+    isGameActive,
     handleAnswer,
     startNewGame,
     resetGame,
