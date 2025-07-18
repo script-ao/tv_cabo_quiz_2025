@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Modal } from "../../components";
+import { useNavigate } from "react-router-dom";
+import { useQuiz } from "../../context/quizContext";
 
 function Register() {
+  const navigate = useNavigate();
+  const { setUserInfo } = useQuiz();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [OpenModal, setOpenModal] = useState(false);
   const [valueModal, setvalueModal] = useState({});
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // Effect to redirect to information page after 8 seconds if form is submitted successfully
+  useEffect(() => {
+    let timer;
+    if (formSubmitted) {
+      timer = setTimeout(() => {
+        navigate('/information');
+      }, 8000); // 8 seconds
+    }
+    return () => clearTimeout(timer);
+  }, [formSubmitted, navigate]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -42,12 +58,18 @@ function Register() {
       if (response.ok) {
         console.log("Formulário enviado com sucesso!");
 
+        // Save user data to context
+        setUserInfo({ name, email, phone });
+
+        // Set formSubmitted to true to trigger the automatic redirect
+        setFormSubmitted(true);
+
         setOpenModal(true)
         setvalueModal(
           {
             className: "btn_sucess",
             text: "Obrigado por se registrar!",
-            to: "/intro"
+            to: "/information"
           }
         )
       } else {

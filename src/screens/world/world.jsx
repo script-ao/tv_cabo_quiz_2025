@@ -14,27 +14,33 @@ function World() {
 
   const itemns_btn = [
     {
-      name: "Games",
+      name: "games",
+      displayName: "Games",
       icon: comanndo,
     },
     {
-      name: "Filme",
+      name: "filmes_e_series",
+      displayName: "Filmes e Séries",
       icon: filme,
     },
     {
-      name: "Redes Sociais",
+      name: "redes_sociais",
+      displayName: "Redes Sociais",
       icon: social,
     },
     {
-      name: "Desporto",
+      name: "desporto",
+      displayName: "Desporto",
       icon: desporto,
     },
     {
-      name: "Musica",
+      name: "musica",
+      displayName: "Música",
       icon: musica,
     },
     {
-      name: "Startups Inovação",
+      name: "startups_e_inovacao",
+      displayName: "Startups e Inovação",
       icon: cup,
     },
   ];
@@ -59,7 +65,7 @@ function World() {
                 onClick={() => handleCategorySelect(item.name)}
               >
                 <img src={item.icon} alt="" />
-                <span>{item.name}</span>
+                <span>{item.displayName}</span>
               </button>
             ))}
           </div>
