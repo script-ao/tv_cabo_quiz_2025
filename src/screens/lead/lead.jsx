@@ -124,7 +124,7 @@ function Lead() {
                 </select>
               </div>
               <div className="le_container_input">
-                <label htmlFor="residence_input">Qual é tua área de residência?<span>*</span></label>
+                <label htmlFor="residence_input">Qual é a tua área de residência?<span>*</span></label>
                 <select
                   id="residence_input"
                   name="residence"
