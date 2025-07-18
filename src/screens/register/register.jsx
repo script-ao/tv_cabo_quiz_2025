@@ -11,32 +11,17 @@ function Register() {
   const [phone, setPhone] = useState('');
   const [OpenModal, setOpenModal] = useState(false);
   const [valueModal, setvalueModal] = useState({});
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
-  // Effect to redirect to information page after 8 seconds if form is submitted successfully
-  useEffect(() => {
-    let timer;
-    if (formSubmitted) {
-      timer = setTimeout(() => {
-        navigate('/information');
-      }, 8000); // 8 seconds
-    }
-    return () => clearTimeout(timer);
-  }, [formSubmitted, navigate]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!name || !email || !phone) {
-
-
-      setOpenModal(true)
-      setvalueModal(
-        {
-          className: "btn_warn",
-          text: "Por favor, preencha todos os campos obrigatórios."
-        }
-      )
+      setOpenModal(true);
+      setvalueModal({
+        className: "btn_warn",
+        text: "Por favor, preencha todos os campos obrigatórios.",
+        buttonText: "OK",
+      });
       return;
     }
 
@@ -61,50 +46,46 @@ function Register() {
         // Save user data to context
         setUserInfo({ name, email, phone });
 
-        // Set formSubmitted to true to trigger the automatic redirect
-        setFormSubmitted(true);
-
-        setOpenModal(true)
-        setvalueModal(
-          {
-            className: "btn_sucess",
-            text: "Obrigado por se registrar!",
-            to: "/information"
-          }
-        )
+        // Show success modal
+        setOpenModal(true);
+        setvalueModal({
+          className: "btn_sucess",
+          text: "Obrigado por se registrar!",
+          to: "/information",
+          buttonText: "Continuar",
+        });
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
-        setOpenModal(true)
-        setvalueModal(
-          {
-            className: "btn_warn",
-            text: "Ocorreu um erro ao enviar o formulário. Tente novamente.",
-            to: ""
-          }
-        )
+        setOpenModal(true);
+        setvalueModal({
+          className: "btn_warn",
+          text: "Ocorreu um erro ao enviar o formulário. Tente novamente.",
+          buttonText: "Tentar Novamente",
+        });
       }
     } catch (error) {
       console.error("Erro de rede:", error);
-      setOpenModal(true)
-      setvalueModal(
-        {
-          className: "btn_warn",
-          text: "Ocorreu um erro de rede. Verifique sua conexão e tente novamente.",
-          to: ""
-        }
-      )
+      setOpenModal(true);
+      setvalueModal({
+        className: "btn_warn",
+        text: "Ocorreu um erro de rede. Verifique sua conexão e tente novamente.",
+        buttonText: "Tentar Novamente",
+      });
     }
   };
 
   return (
     <React.Fragment>
       <section className="re_wrapper">
-        {OpenModal && <Modal
-          text={valueModal.text}
-          setOpenModal={setOpenModal}
-          className={valueModal.className}
-          to={valueModal.to}
-        />}
+        {OpenModal && (
+          <Modal
+            text={valueModal.text}
+            setOpenModal={setOpenModal}
+            className={valueModal.className}
+            to={valueModal.to}
+            buttonText={valueModal.buttonText}
+          />
+        )}
         <main className="re_container">
           <div className="re_highlight">
             <h2>PREENCHE <br />O FORMULÁRIO </h2>

@@ -2,11 +2,20 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../button";
 
-function Modal({ text, setOpenModal, className }) {
+function Modal({
+  text,
+  setOpenModal,
+  className,
+  to,
+  buttonText = "Continuar",
+}) {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/intro");
+    setOpenModal(false);
+    if (to) {
+      navigate(to);
+    }
   }
 
   return (
@@ -15,11 +24,8 @@ function Modal({ text, setOpenModal, className }) {
         <div className="mo_container">
           <span>{text}</span>
           <Button
-            text="OK"
-            onClick={() => {
-              setOpenModal(false);
-              handleClick();
-            }}
+            text={buttonText}
+            onClick={handleClick}
             className={className}
           />
         </div>
