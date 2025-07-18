@@ -1,1 +1,0 @@
-export {Mordal} from "./mordal"

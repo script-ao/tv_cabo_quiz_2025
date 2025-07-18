@@ -19,15 +19,17 @@ function Trivia() {
   } = useQuiz();
 
   const imgCategory ={
-    "games":mumdogame,
-    "filme": mundoFilmes,
-    "redes_sociais":mundoRedes,
+    "games": mumdogame,
+    "filmes_e_series": mundoFilmes,
+    "redes_sociais": mundoRedes,
     "desporto": mundoDesporto,
-    "musica":mundomusica,
-    "startups_inovação":mundoStartps
+    "musica": mundomusica,
+    "startups_e_inovacao": mundoStartps
   }
 
-  
+
+
+
   // Se não houver pergunta atual, mostra uma mensagem de carregamento.
   if (!currentQuestion) {
     return (

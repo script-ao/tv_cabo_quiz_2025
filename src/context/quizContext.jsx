@@ -28,6 +28,7 @@ export const QuizProvider = ({ children }) => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
   const [isGameActive, setIsGameActive] = useState(false);
+  const [userData, setUserData] = useState(null);
 
   // Load categories on mount
   useEffect(() => {
@@ -55,7 +56,7 @@ export const QuizProvider = ({ children }) => {
       setTimeLeft(timeLeft - 1);
     }, 1000);
 
-    if (timeLeft === 0) {
+    if (timeLeft === 0 && isGameActive) {
       // If time runs out, end the game and navigate to lose screen
       setGameOver(true);
       navigate('/lose');
@@ -74,7 +75,7 @@ export const QuizProvider = ({ children }) => {
 
   // Handle answer selection
   const handleAnswer = (isCorrect, optionIndex) => {
-    if (isAnswered) return;
+    if (isAnswered || gameOver) return; // Don't proceed if already answered or game is over
 
     setIsAnswered(true);
     setSelectedOptionIndex(optionIndex);
@@ -85,7 +86,8 @@ export const QuizProvider = ({ children }) => {
         handleNextQuestion();
       }, 2000);
     } else {
-      // If answer is incorrect, navigate to lose screen after 2 seconds
+      // If answer is incorrect, set game over and navigate to lose screen after 2 seconds
+      setGameOver(true);
       setTimeout(() => {
         navigate('/lose');
       }, 2000);
@@ -94,6 +96,8 @@ export const QuizProvider = ({ children }) => {
 
   // Handle moving to next question
   const handleNextQuestion = () => {
+    if (gameOver) return; // Don't proceed if game is over
+
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setTimeLeft(30);
@@ -129,7 +133,13 @@ export const QuizProvider = ({ children }) => {
     setIsAnswered(false);
     setSelectedOptionIndex(null);
     setIsGameActive(false);
+    setUserData(null);
     navigate('/');
+  };
+
+  // Set user data
+  const setUserInfo = (data) => {
+    setUserData(data);
   };
 
   // Context value
@@ -145,9 +155,11 @@ export const QuizProvider = ({ children }) => {
     selectedOptionIndex,
     progressPercentage,
     isGameActive,
+    userData,
     handleAnswer,
     startNewGame,
     resetGame,
+    setUserInfo,
   };
 
   return (

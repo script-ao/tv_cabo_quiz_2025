@@ -1,10 +1,11 @@
 import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/svgs/logo/tvcabo.svg"
-function Certificate() {
+import { useQuiz } from "../../context/quizContext";
 
-  const user = JSON.parse(localStorage.getItem('user')) || '';
-  const navigate= useNavigate()
+function Certificate() {
+  const { userData, resetGame } = useQuiz();
+  const navigate = useNavigate();
   const hoje = new Date();
   const meses = [
   'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
@@ -15,23 +16,48 @@ const mesNome = meses[hoje.getMonth()];
 const ano = hoje.getFullYear();
 const dataFormatada = `${dia} de ${mesNome} de  ${ano}`
 
-   /*useEffect(() => {
-      if(!user){
+   useEffect(() => {
+      if(!userData){
         navigate("/")
       }
-   },[user, navigate])*/
+   },[userData, navigate])
+
+   // Send user data to webhook when certificate is displayed
+   useEffect(() => {
+     if (userData) {
+       const sendCertificateData = async () => {
+         try {
+           await fetch('https://platform.bisc8.digital/webhook/last_form', {
+             method: 'POST',
+             headers: {
+               'Content-Type': 'application/json',
+             },
+             body: JSON.stringify({
+               ...userData,
+               certificate: true,
+               date: dataFormatada
+             }),
+           });
+           console.log("Certificate data sent to webhook");
+         } catch (error) {
+           console.error("Error sending certificate data:", error);
+         }
+       };
+
+       sendCertificateData();
+     }
+   }, [userData, dataFormatada]);
+
+  // Reset game and navigate to home after 10 seconds
+  useEffect(() => {
+    const time = setTimeout(() => {
+      resetGame(); // This will clear userData and navigate to "/"
+    }, 10000);
+
+    return () => clearTimeout(time);
+  },[resetGame]);
 
 
-  /*useEffect(() => {
-    const time = setTimeout(() =>{
-      localStorage.clear()
-      navigate("/")
-    }, 10000)
-
-    return () => clearTimeout(time)
-  },[navigate])*/
-  
-  
   return (
     <React.Fragment>
        <section className="ce_wrapper">
@@ -43,14 +69,14 @@ const dataFormatada = `${dia} de ${mesNome} de  ${ano}`
                 </div>
                 <p>Sempre ligado</p>
               </div>
-               
+
                <div className="ce_description">
                   <h2>A TV CABO </h2>
                   <h3>Certifica que o mundo de</h3>
 
                </div>
                   <div className="ce_inf">
-                      <span>{user.name}</span>
+                      <span>{userData ? userData.name : 'Jogador'}</span>
                   </div>
 
                   <div className="ce_inf_date">
@@ -65,10 +91,10 @@ const dataFormatada = `${dia} de ${mesNome} de  ${ano}`
 
                   </div>
 
-              
+
             </div>
 
-            
+
             </main>
         </section>
     </React.Fragment>
