@@ -30,7 +30,7 @@
           ]
         },
         {
-          "question": "Em que ano foi lançado a primeira consola PlayStation pela Sony?",
+          "question": "Em que ano foi lançada a primeira consola PlayStation pela Sony?",
           "options": [
             {"answer": "1990", "correct": false},
             {"answer": "1994", "correct": true},
