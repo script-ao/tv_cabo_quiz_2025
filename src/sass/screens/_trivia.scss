@@ -7,7 +7,6 @@
     height: 100svh;
     font-family: "Poppins";
     overflow: hidden;
-    //padding: 0 2rem;
 
     &::after {
         content: "";
@@ -26,7 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     height: 100%;
     position: relative;
     z-index: 2;
@@ -100,6 +99,9 @@
 }
 
 @media (min-width: 3840px) {
+    .tr_container {
+        gap: 8rem;
+    }
     .tr_questions {
         width: 100%;
         p {
@@ -121,16 +123,16 @@
         }
     }
     .tr_container_questions {
-    background-color: #081435;
-    padding: 8rem 10rem;
-    width: 50%;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
-    .tr_word{
-   padding: 1rem;
-    margin-bottom: 7rem;
-}
+        background-color: #081435;
+        padding: 8rem 10rem;
+        width: 50%;
+        border-top-left-radius: 14rem;
+        border-bottom-left-radius: 14rem;
+    }
+    .tr_word {
+        padding: 1rem;
+        margin-bottom: 7rem;
+    }
 
     .tr_separation {
         height: 2rem;
