@@ -7,8 +7,8 @@ function Lead() {
   const [ageRange, setAgeRange] = useState("");
   const [isClient, setIsClient] = useState("");
   const [residence, setResidence] = useState("");
-   const [OpenMordal, setOpenMordal] = useState(false);
-    const [valueMordal, setvalueMordal] = useState({});
+  const [OpenMordal, setOpenMordal] = useState(false);
+  const [valueMordal, setvalueMordal] = useState({});
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {

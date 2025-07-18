@@ -19,13 +19,15 @@ function Trivia() {
   } = useQuiz();
 
   const imgCategory ={
-    "games":mumdogame,
-    "filme": mundoFilmes,
-    "redes_sociais":mundoRedes,
-    "desporto": mundoDesporto,
-    "musica":mundomusica,
-    "startups_inovação":mundoStartps
+    "Games":mumdogame,
+    "Filme": mundoFilmes,
+    "Redes Sociais":mundoRedes,
+    "Desporto": mundoDesporto,
+    "Musica":mundomusica,
+    "Startups Inovação":mundoStartps
   }
+
+  
 
   
   // Se não houver pergunta atual, mostra uma mensagem de carregamento.
