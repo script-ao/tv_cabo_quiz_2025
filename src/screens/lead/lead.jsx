@@ -92,7 +92,7 @@ function Lead() {
           <form className="le_form" onSubmit={handleSubmit}>
             <div className="le_container_form">
               <div className="le_container_input">
-                <label htmlFor="age_range_input">Qual é a sua faixa etária: <span>*</span></label>
+                <label htmlFor="age_range_input">Qual é a tua faixa etária: <span>*</span></label>
                 <select
                   id="age_range_input"
                   name="ageRange"
@@ -100,16 +100,16 @@ function Lead() {
                   onChange={(e) => setAgeRange(e.target.value)}
                   required
                 >
-                  <option value="" disabled>Seleciona uma opção</option>
-                  <option value="18-24">18-24</option>
-                  <option value="25-34">25-34</option>
-                  <option value="35-44">35-44</option>
-                  <option value="45-54">45-54</option>
-                  <option value="55+">55- ou mais</option>
+                  <option value="" disabled>Selecciona uma opção</option>
+                  <option value="18-24">18 - 24</option>
+                  <option value="25-34">25 - 34</option>
+                  <option value="35-44">35 - 44</option>
+                  <option value="45-54">45 - 54</option>
+                  <option value="55+">55 - ou mais</option>
                 </select>
               </div>
               <div className="le_container_input">
-                <label htmlFor="is_client_input">És cliente tvcabo?: <span>*</span></label>
+                <label htmlFor="is_client_input">És cliente TVCABO? <span>*</span></label>
                 <select
                   id="is_client_input"
                   name="isClient"
@@ -117,14 +117,14 @@ function Lead() {
                   onChange={(e) => setIsClient(e.target.value)}
                   required
                 >
-                  <option value="" disabled>Seleciona uma opção</option>
+                  <option value="" disabled>Selecciona uma opção</option>
                   <option value="Sim">Sim</option>
                   <option value="Não">Não</option>
-                  <option value="Não tenho serviço na minha zona">Não tenho serviço na minha zona</option>
+                  <option value="Não tem o serviço na minha zona">Não tem o serviço na minha zona.</option>
                 </select>
               </div>
               <div className="le_container_input">
-                <label htmlFor="residence_input">Qual é sua area de residencia? <span>*</span></label>
+                <label htmlFor="residence_input">Qual é a tua área de residência?<span>*</span></label>
                 <select
                   id="residence_input"
                   name="residence"
@@ -132,10 +132,10 @@ function Lead() {
                   onChange={(e) => setResidence(e.target.value)}
                   required
                 >
-                  <option value="" disabled>Seleciona uma opção</option>
+                  <option value="" disabled>Selecciona uma opção</option>
                   <option value="Luanda">Luanda</option>
                   <option value="Benguela">Benguela</option>
-                  <option value="Huila">Huila</option>
+                  <option value="Huila">Huíla</option>
                   <option value="Huambo">Huambo</option>
                   <option value="Zaire">Zaire</option>
                 </select>

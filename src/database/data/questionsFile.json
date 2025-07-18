@@ -3,16 +3,16 @@
     "games": {
       "perguntas": [
         {
-          "question": "Qual é o serviço TVCABO essencial para garantir que a sua experiência de jogo online seja fluida e sem interrupções, mesmo em momentos de pico?",
+            "question": "Qual é o serviço TVCABO essencial para garantir que a tua experiência de jogo online seja fluida e sem interrupções, mesmo em momentos de pico?",
           "options": [
             {"answer": "Internet Ilimitada", "correct": true},
             {"answer": "Planos de TV", "correct": false},
             {"answer": "Planos de Voz", "correct": false},
-            {"answer": "TVCabo Play", "correct": false}
+            {"answer": "TVCABO Play", "correct": false}
           ]
         },
         {
-          "question": "Com a Internet Ilimitada da TVCABO, qual destas atividades de gaming é mais fácil de realizar sem te preocupar com o consumo de dados ou lentidão?",
+          "question": "Com a Internet Ilimitada da TVCABO, qual destas actividades de gaming é mais fácil de realizar sem te preocupares com o consumo de dados ou lentidão?",
           "options": [
             {"answer": "Baixar jogos grandes em minutos", "correct": true},
             {"answer": "Fazer chamadas telefónicas", "correct": false},
@@ -30,7 +30,7 @@
           ]
         },
         {
-          "question": "Em que ano foi lançado o primeiro consola PlayStation pela Sony?",
+          "question": "Em que ano foi lançada a primeira consola PlayStation pela Sony?",
           "options": [
             {"answer": "1990", "correct": false},
             {"answer": "1994", "correct": true},
@@ -39,7 +39,7 @@
           ]
         },
         {
-          "question": "Qual é o jogo popular em que vários jogadores competem entre si, e vence quem ficar por último na partida — sozinho ou em equipa?",
+          "question": "Qual é o jogo popular em que vários jogadores competem entre si, e vence quem ficar por último na partida(sozinho ou em equipa)?",
           "options": [
             {"answer": "Minecraft", "correct": false},
             {"answer": "The Sims", "correct": false},
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "question": "O que é que a Internet Ilimitada da TVCABO lhe permite fazer nas redes sociais sem se preocupar com o consumo excessivo de dados?",
+          "question": "O que é que a Internet Ilimitada da TVCABO lhe permite fazer nas redes sociais sem te preocupares com o consumo excessivo de dados?",
           "options": [
             {"answer": "Apenas enviar mensagens de texto", "correct": false},
             {"answer": "Assistir longos Podcasts e lives em alta definição", "correct": true},
@@ -83,7 +83,7 @@
           "options": [
             {"answer": "Google", "correct": false},
             {"answer": "Apple", "correct": false},
-            {"answer": "Facebook Inc.", "correct": false},
+            {"answer": "Facebook", "correct": false},
             {"answer": "LinkedIn", "correct": true}
           ]
         },
@@ -159,7 +159,7 @@
           ]
         },
         {
-          "question": "Para além da Internet, que outro serviço da TVCABO disponibiliza uma ampla seleção de canais com filmes, séries e entretenimento para todas as idades?",
+          "question": "Para além da Internet, que outro serviço da TVCABO disponibiliza uma ampla selecção de canais com filmes, séries e entretenimento para todas as idades?",
           "options": [
             {"answer": "Planos de Voz", "correct": false},
             {"answer": "Planos de TV", "correct": true},
@@ -168,7 +168,7 @@
           ]
         },
         {
-          "question": "Qual é o nome do famoso diretor de cinema responsável por filmes épicos como 'Titanic' e 'Avatar'?",
+          "question": "Qual é o nome do famoso director de cinema responsável por filmes épicos como 'Titanic' e 'Avatar'?",
           "options": [
             {"answer": "Steven Spielberg", "correct": false},
             {"answer": "Christopher Nolan", "correct": false},
@@ -199,7 +199,7 @@
     "desporto": {
       "perguntas": [
         {
-          "question": "Qual é o serviço da TVCABO que garante uma ligação estável e de alta qualidade para acompanhar transmissões em direto de analistas desportivos?",
+          "question": "Qual é o serviço da TVCABO que garante uma ligação estável e de alta qualidade para acompanhar transmissões em directo de analistas desportivos?",
           "options": [
             {"answer": "Planos de Voz", "correct": false},
             {"answer": "Planos de TV", "correct": false},
@@ -217,7 +217,7 @@
           ]
         },
         {
-          "question": "Quem é o melhor marcador da história da Seleção Nacional de Angola (Palancas Negras)?",
+          "question": "Quem é o melhor marcador da história da Selecção Nacional de Angola (Palancas Negras)?",
           "options": [
             {"answer": "Akwá", "correct": true},
             {"answer": "Mantorras", "correct": false},
@@ -257,7 +257,7 @@
           ]
         },
         {
-          "question": "Além da Internet, que outro serviço da TVCABO é essencial para garantir uma comunicação fluída numa startup?",
+          "question": "Além da Internet, que outro serviço da TVCABO é essencial para garantir uma comunicação fluida numa startup?",
           "options": [
             {"answer": "Planos de Voz", "correct": true},
             {"answer": "Planos de TV", "correct": false},
@@ -266,7 +266,7 @@
           ]
         },
         {
-          "question": "Qual empresa é amplamente reconhecida pelos seus carros elétricos inovadores e pela sua atuação na exploração espacial através da SpaceX?",
+          "question": "Qual empresa é amplamente reconhecida pelos seus carros eléctricos inovadores e pela sua actuação na exploração espacial através da SpaceX?",
           "options": [
             {"answer": "Amazon", "correct": false},
             {"answer": "Google", "correct": false},
@@ -287,9 +287,9 @@
           "question": "O que é um pitch?",
           "options": [
             {"answer": "Um relatório de análise de mercado", "correct": false},
-            {"answer": "Uma apresentação breve e persuasiva de uma ideia, projeto ou produto", "correct": true},
-            {"answer": "Um plano de negócios detalhado com projeções financeiras", "correct": false},
-            {"answer": "Uma campanha publicitária multicanal", "correct": false}
+            {"answer": "Uma apresentação breve e persuasiva de uma ideia, projecto ou produto", "correct": true},
+            {"answer": "Um plano de negócios detalhado com projecções financeiras", "correct": false},
+            {"answer": "Uma campanha publicitária multi-canal", "correct": false}
           ]
         }
       ]
