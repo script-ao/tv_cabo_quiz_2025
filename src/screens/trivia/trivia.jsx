@@ -1,5 +1,11 @@
 import React from "react";
-import world from "../../assets/images/svgs/icon/mundo.svg";
+import mumdogame from "../../assets/images/svgs/icon/mumdogame.svg"
+import mundoDesporto from "../../assets/images/svgs/icon/mundoDesporto.svg"
+import mundoFilmes from "../../assets/images/svgs/icon/mundoFilmes.svg"
+import mundomusica from "../../assets/images/svgs/icon/mundomusica.svg"
+import mundoRedes from "../../assets/images/svgs/icon/mundoRedes.svg"
+import mundoStartps from "../../assets/images/svgs/icon/mundoStartps.svg"
+
 import { Button, Timer } from "../../components";
 import { useQuiz } from "../../context/quizContext";
 
@@ -8,9 +14,20 @@ function Trivia() {
     currentQuestion, 
     handleAnswer, 
     isAnswered,
-    selectedOptionIndex
+    selectedOptionIndex,
+    selectedCategory
   } = useQuiz();
 
+  const imgCategory ={
+    "games":mumdogame,
+    "filme": mundoFilmes,
+    "redes_sociais":mundoRedes,
+    "desporto": mundoDesporto,
+    "musica":mundomusica,
+    "startups_inovação":mundoStartps
+  }
+
+  
   // Se não houver pergunta atual, mostra uma mensagem de carregamento.
   if (!currentQuestion) {
     return (
@@ -41,7 +58,7 @@ function Trivia() {
             <div className="tr_container_questions">
               <div className="tr_word">
                 <div className="tr_world_img">
-                  <img src={world} alt="" />
+                  <img src={imgCategory[selectedCategory]} alt="" />
                 </div>
                 <div className="tr_separation"></div>
               </div>

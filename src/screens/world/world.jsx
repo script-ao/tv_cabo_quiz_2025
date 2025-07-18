@@ -18,7 +18,7 @@ function World() {
       icon: comanndo,
     },
     {
-      name: "filme",
+      name: "filmes_e_series",
       icon: filme,
     },
     {
@@ -34,7 +34,7 @@ function World() {
       icon: musica,
     },
     {
-      name: "startups_inovação",
+      name: "startups_e_inovacao",
       icon: cup,
     },
   ];
@@ -59,7 +59,7 @@ function World() {
                 onClick={() => handleCategorySelect(item.name)}
               >
                 <img src={item.icon} alt="" />
-                <span>{item.name.replace('_', ' ')}</span>
+                <span>{item.name.replace(/_/g, ' ')}</span>
               </button>
             ))}
           </div>
