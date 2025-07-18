@@ -18,7 +18,7 @@ function Timer() {
     if (percentageLeft <= 50) {
       return '#ffa500'; // Laranja para 50% ou menos
     }
-    return '#4caf50'; // Verde para mais de 50%
+    return '#60C8D8'; // Verde para mais de 50%
   };
 
   return (
