@@ -1,75 +1,58 @@
-.re_wrapper{
-   
-   display: flex;
-   align-items: center;
+.re_wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    background-size: cover;
-    height: 100svh;
-    font-family:"Poppins";
     position: relative;
-   &::after{
-        content: '';
-        background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
-        opacity: 0.6;
-        position: absolute;
-        height: 100svh;
-        width: 100%;
-        top:0;
-        z-index: 1;
-    }
+    height: 100%;
 
+    font-family: "Poppins";
 }
 
-.re_container{
+.re_container {
     display: flex;
-   align-items: center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    position: relative;
-    z-index: 2;
+    height: 100%;
     gap: 2rem;
-   
 }
 
-.re_highlight{
-     h2{
-        color: #fff;
-        font-weight: 900;
-        font-size: 4.5rem;
-        text-align: center;
-        line-height: 5.5rem;
-    }
+.re_highlight {
+    color: #fff;
+    font-weight: 900;
+    font-size: 4.5rem;
+    text-align: center;
+    line-height: 5.5rem;
 }
-.re_form{
+.re_form {
     width: 50%;
-    
 }
-.re_container_form{
+.re_container_form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 4rem;
 }
 
-
-.re_container_input{
+.re_container_input {
     display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap: 1rem;
 
-    label{
+    label {
         font-size: 1.6rem;
         color: #fff;
         font-weight: bold;
 
-        span{
-            color: #1FB1D0;
+        span {
+            color: #1fb1d0;
         }
     }
 
-    input{
-        padding: .8rem 1rem;
+    input {
+        padding: 0.8rem 1rem;
         border: none;
         outline: none;
         border-radius: 2rem;
@@ -77,67 +60,51 @@
     }
 }
 
-.re_btn{
+.re_btn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-@media (min-width: 3840px){
-
-    .re_container{
-    
-    gap: 8rem;
-   
-}
-    .re_highlight{
-     h2{
-      
-        font-size: 10rem;
-        
-        line-height: 12rem;
+@media (min-width: 3840px) {
+    .re_container {
+        position: relative;
+        gap: 8rem;
     }
-}
+    .re_highlight {
+        font-size: 18rem;
 
-.re_container_form{
-   
-    gap: 8rem;
-    margin-bottom: 8rem;
-}
-
-.re_container_input{
-    display: flex;
-    flex-direction: column;
-    gap:2rem;
-
-    label{
-        font-size: 6rem;
-        color: #fff;
-        font-weight: bold;
-
-        span{
-            color: #1FB1D0;
-        }
+        line-height: 21rem;
     }
 
-   input{
-      
-        padding: 4rem 5rem;
-       
-        border-radius: 8rem;
-        font-size: 7rem;
-        option{
-            font-size: 4rem;
-            
+    .re_container_form {
+        gap: 8rem;
+        margin-bottom: 8rem;
+    }
+
+    .re_container_input {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        label {
+            font-size: 6rem;
+            color: #fff;
+            font-weight: bold;
+
+            span {
+                color: #1fb1d0;
+            }
         }
 
+        input {
+            padding: 4rem 5rem;
 
+            border-radius: 8rem;
+            font-size: 7rem;
+            option {
+                font-size: 4rem;
+            }
+        }
     }
-
- 
-
-    
-}
-
 }

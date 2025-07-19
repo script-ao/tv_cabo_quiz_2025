@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Modal } from "../../components";
-import { useNavigate } from "react-router-dom";
 import { useQuiz } from "../../context/quizContext";
 
 function Register() {
-  const navigate = useNavigate();
+  
   const { setUserInfo } = useQuiz();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -74,6 +73,7 @@ function Register() {
     }
   };
 
+
   return (
     <React.Fragment>
       <section className="re_wrapper">
@@ -88,7 +88,7 @@ function Register() {
         )}
         <main className="re_container">
           <div className="re_highlight">
-            <h2>PREENCHE <br />O FORMULÁRIO </h2>
+            <span>PREENCHE <br />O FORMULÁRIO </span>
           </div>
 
           <form className="re_form" onSubmit={handleSubmit}>

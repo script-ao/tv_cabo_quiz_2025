@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Button, Modal } from "../../components";
 
 
@@ -9,7 +8,7 @@ function Lead() {
   const [residence, setResidence] = useState("");
   const [OpenModal, setOpenModal] = useState(false);
   const [valueModal, setvalueModal] = useState({});
-  const navigate = useNavigate();
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -75,6 +74,7 @@ function Lead() {
     }
   };
 
+  
   return (
     <React.Fragment>
       <section className="le_wrapper">
@@ -86,7 +86,7 @@ function Lead() {
         />}
         <main className="le_container">
           <div className="le_highlight">
-            <h2>Responde <br />O FORMULÁRIO </h2>
+            <span>Responde <br />O FORMULÁRIO </span>
           </div>
 
           <form className="le_form" onSubmit={handleSubmit}>
@@ -133,11 +133,25 @@ function Lead() {
                   required
                 >
                   <option value="" disabled>Selecciona uma opção</option>
-                  <option value="Luanda">Luanda</option>
+                   <optgroup label="Luanda">
+                   <option value="luanda-belas">Belas</option>
+                   <option value="luanda-cacuaco">Cacuaco</option>
+                   <option value="luanda-cazenga">Cazenga</option>
+                   <option value="luanda-IcoloBengo">Icolo e Bengo</option>
+                  <option value="luanda-Luanda"> Luanda</option>
+                   <option value="luanda-quicama"> Quiçama</option>
+                  <option value="luanda-KilambaKiaxi">Kilamba Kiaxi</option>
+                   <option value="luanda-Talatona"> Talatona</option>
+                   <option value="luanda-Viana"> Viana</option>
+
+                   
+                  </optgroup>
                   <option value="Benguela">Benguela</option>
                   <option value="Huila">Huíla</option>
                   <option value="Huambo">Huambo</option>
                   <option value="Zaire">Zaire</option>
+
+                  
                 </select>
               </div>
             </div>

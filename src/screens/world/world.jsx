@@ -50,22 +50,27 @@ function World() {
     <React.Fragment>
       <section className="wo_wrapper">
         <main className="wo_container_content">
-          <div className="wo_title-container">
-            <span>Qual é o</span>
-            <span>teu Mundo</span>
+          <div className="wo_content">
+
+            <div className="wo_title-container">
+              <span>Qual é o</span>
+              <span>teu Mundo</span>
+            </div>
+            <div className="wo_buttons-container">
+              <div className="wo_buttons">
+                {itemns_btn.map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleCategorySelect(item.name)}
+                  >
+                    <img src={item.icon} alt="" />
+                    <span>{item.displayName}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div className="wo_buttons-container">
-            {itemns_btn.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleCategorySelect(item.name)}
-              >
-                <img src={item.icon} alt="" />
-                <span>{item.displayName}</span>
-              </button>
-            ))}
-          </div>
         </main>
       </section>
     </React.Fragment>

@@ -19,7 +19,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 5rem;
+
+  
+
 }
 
 .st_title-container {
@@ -74,6 +78,7 @@
   width: 30%;
   img {
     width: 100%;
+    
   }
 }
 
@@ -88,60 +93,121 @@
 .st_person_img {
   flex: 1;
   display: flex;
-  position: relative;
+
 
   img {
-    width: 80%;
-    margin-bottom: -4rem;
-    z-index: 6;
+    width: 90%;
+    margin-bottom: -7rem;
+   
   }
 
 }
 
 @media (min-width: 3840px) {
-  .st_content {
+  .st_wrapper {
+  flex: 1;
+  display: flex;
+  font-family: "Poppins";
+}
+
+.st_container {
+  width: 100%;
+
+  flex: 1;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.st_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+
+  
+  
+
+}
+
+.st_title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  span {
+    color: #ffff;
+    font-weight: 900;
+    text-transform: uppercase;
   }
-  .st_highlight {
-    line-height: 35rem;
 
-    p:first-child {
-      font-size: 48rem;
-    }
-
-    p:last-child {
-      font-size: 25rem;
-    }
+  & :first-child {
+    font-size: 50rem;
+  line-height: 53rem;
   }
 
-  .st_content {
-    gap: 8rem;
+  & :last-child {
+    font-size: 26rem;
+    line-height:30rem;
+  }
+}
+.st_highlight {
+  text-align: center;
+  text-transform: uppercase;
+
+  span:first-child {
+    font-size: 18rem;
   }
 
-  .st_container_subtitle {
-    display: flex;
-    justify-content: center;
-    gap: 6rem;
-    margin-bottom: 2rem;
-
-    p {
-      font-size: 5rem;
-      color: #fff;
-      font-weight: 900;
-    }
+  span:last-child {
+    font-size: 8rem;
   }
+}
 
-  .st_subtitle {
-    font-size: 4rem;
-    margin: 4rem 0;
+.st_container_subtitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+
+  span {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 900;
   }
+}
 
-  .st_img_subtitle {
+.st_img_subtitle {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  width: 100%;
+  img {
     width: 100%;
-
-    img {
-      width: 100%;
-    }
+    
   }
+}
+
+.st_subtitle {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+
+.st_person_img {
+  flex: 1;
+  display: flex;
+
+
+  img {
+    width: 130rem;
+    margin-bottom: -13.2rem;
+    object-fit: cover;
+   
+  }
+
+}
 }
 
 @media (min-resolution: 2dppx) {

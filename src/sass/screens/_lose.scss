@@ -7,16 +7,7 @@
     background-size: cover;
     height: 100svh;
     font-family:"Poppins";
-   &::after{
-    content: '';
-    background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
-    opacity: 0.8;
-    position: absolute;
-    height: 100svh;
-    width: 100%;
-    top:0;
-    z-index: 1;
-    }
+ 
 
 }
 
@@ -49,10 +40,10 @@
     h2{
         color: #fff;
         font-weight: 900;
-        font-size: 20rem;
+        font-size: 25rem;
         text-align: center;
         text-transform: uppercase;
-        line-height: 22rem;
+        line-height: 26rem;
     }
 
     p{

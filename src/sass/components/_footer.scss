@@ -2,6 +2,7 @@
   width: 100%;
   font-family: "Poppins";
 
+  padding: 0 0 4rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,32 +81,71 @@
 
 @media (min-width: 3840px) {
   .ft_wrapper {
-    bottom: 3rem;
-    padding: 2rem 10rem;
-  }
+  width: 100%;
+  font-family: "Poppins";
 
-  .ft_image {
-    > img {
-      width: 24rem;
+  padding: 0 0 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ft_container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ============= First Container ============= */
+.ft_first-container {
+}
+
+.ft_logo-container img {
+  width: 30.4rem;
+}
+
+/* ============= Seccond Container ============= */
+.ft_seccond_container {
+  display: flex;
+  align-items: center;
+  gap: 4.6rem;
+}
+
+.ft_link-container {
+  span {
+    font-size: 5rem;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+.ft_social_icons-container {
+  display: flex;
+  align-items: center;
+
+  .ft_icons-list {
+    display: flex;
+    gap: 2.4rem;
+
+    li {
+      width: 10.248rem;
+      height: 10.272rem;
+
+      background-color: white;
+      mix-blend-mode: screen;
+      border-radius: 5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        color: #000000;
+        font-size: 5.4rem;
+      }
     }
   }
-
-  .ft_social {
-    font-size: 4rem;
-    background: #fff;
-    height: 8rem;
-    width: 8rem;
-    border-radius: 100%;
-  }
-
-  .ft_wrapper_social {
-    gap: 4rem;
-    span {
-      font-size: 4rem;
-    }
-  }
-
-  .ft_container_social {
-    gap: 4rem;
-  }
+}
 }
