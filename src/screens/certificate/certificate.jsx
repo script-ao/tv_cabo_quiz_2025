@@ -83,8 +83,8 @@ function Certificate() {
             </div>
 
             <div className="ce_description">
-              <h2>A TV CABO </h2>
-              <h3>Certifica que o mundo de</h3>
+              <span>A TV CABO </span>
+              <span>Certifica que o mundo de</span>
             </div>
             <div className="ce_inf">
               <span>{userData ? userData.name : "Jogador"}</span>

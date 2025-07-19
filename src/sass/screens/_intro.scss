@@ -1,23 +1,13 @@
 @use "../abstracts" as *;
 
 .i_wrapper{
-   
+   flex:1;
    display: flex;
    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 100svh;
+   justify-content: center;
+     
     font-family: "Poppins";
-   &::after{
-        content: '';
-        background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
-        opacity: 0.8;
-        position: absolute;
-        height: 100svh;
-        width: 100%;
-        top:0;
-        z-index: 1;
-    }
+  
 
 }
 
@@ -25,18 +15,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:2.5rem;
-    position: relative;
-    z-index: 2;
-
-    h2{
-        color: #fff;
-        font-weight: 900;
-        font-size: 8rem;
-        line-height: 9rem;
-        text-align: center;
-        text-transform: uppercase;
-    }
+    
 
     p{
         text-align: center;
@@ -48,32 +27,40 @@
     }
 }
 
+.i_highlight{
+    color: #fff;
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: 9rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 @media (min-width: 3840px){
     .i_container{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap:8rem;
-    position: relative;
-    z-index: 2;
-
-    h2{
-        color: #fff;
-        font-weight: 900;
-        font-size: 16rem;
-        line-height: 16rem;
-        text-align: center;
-        text-transform: uppercase;
-    }
+    
 
     p{
         text-align: center;
-        font-size: 8rem;
-        line-height: 12rem;
-        font-weight: 800;
+        font-size: 12rem;
+        line-height: 18rem;
+        font-weight: 600;
         color: #fff;
         
     }
+}
+
+.i_highlight{
+    color: #fff;
+    font-weight: 900;
+    font-size: 24rem;
+    line-height: 24rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 }

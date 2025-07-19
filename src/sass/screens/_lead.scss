@@ -1,23 +1,14 @@
 .le_wrapper{
-   
+   flex: 1;
    display: flex;
    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 100svh;
-    font-family:"Poppins";
-    position: relative;
-   &::after{
-        content: '';
-        background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
-        opacity: 0.6;
-        position: absolute;
-        height: 100svh;
-        width: 100%;
-        top:0;
-        z-index: 1;
-    }
-
+   justify-content: center;
+   position: relative;
+   
+   background-size: cover;
+    
+   font-family:"Poppins";
+  
 }
 
 .le_container{
@@ -26,21 +17,21 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    position: relative;
-    z-index: 2;
+    
     gap: 2rem;
    
 }
 
 .le_highlight{
-     h2{
-        color: #fff;
-        font-weight: 900;
-        font-size: 4.5rem;
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 5.5rem;
-    }
+   
+    color: #fff;
+    font-weight: 900;
+    font-size: 4.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    
+    line-height: 5.5rem;
+    
 }
 .le_form{
     width: 50%;
@@ -83,6 +74,10 @@
             
         }
 
+        optgroup{
+            font-size: 2rem;
+        }
+
 
     }
 
@@ -101,17 +96,12 @@
 @media (min-width: 3840px){
 
     .le_container{
-    
-    gap: 8rem;
-   
+    gap: 8rem; 
 }
     .le_highlight{
-     h2{
-      
-        font-size: 10rem;
-        
-        line-height: 12rem;
-    }
+    font-size: 14rem;
+    line-height: 16rem;
+    
 }
 
 .le_container_form{

@@ -11,11 +11,11 @@ function Intro() {
     <React.Fragment>
       <section className="i_wrapper">
         <main className="i_container">
-          <h2>
+          <span className="i_highlight">
             Bem-vindo ao
             <br />
             universo da TVCABO
-          </h2>
+          </span>
           <p>
             Testa os teus conhecimentos.
             <br />

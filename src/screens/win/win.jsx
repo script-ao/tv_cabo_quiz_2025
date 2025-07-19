@@ -1,4 +1,5 @@
 import React from "react";
+import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components";
 import { useQuiz } from "../../context/quizContext/quizContext";
@@ -14,11 +15,12 @@ function Win() {
   return (
     <React.Fragment>
       <section className="win_wrapper">
+        <Confetti width={window.innerWidth} height={window.innerHeight} />
         <main className="win_container">
           <p>PARABÉNS</p>
-          <h2>
+          <span className="win_highlight">
             Venceste <br /> O JOGO
-          </h2>
+          </span>
 
           <div className="win_buttons">
             <Button
