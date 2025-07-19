@@ -1,34 +1,26 @@
 import React from "react";
-import mumdogame from "../../assets/images/svgs/icon/mumdogame.svg"
-import mundoDesporto from "../../assets/images/svgs/icon/mundoDesporto.svg"
-import mundoFilmes from "../../assets/images/svgs/icon/mundoFilmes.svg"
-import mundomusica from "../../assets/images/svgs/icon/mundomusica.svg"
-import mundoRedes from "../../assets/images/svgs/icon/mundoRedes.svg"
-import mundoStartps from "../../assets/images/svgs/icon/mundoStartps.svg"
-
+import { useQuiz } from "../../context/quizContext/quizContext";
 import { Button, Timer } from "../../components";
-import { useQuiz } from "../../context/quizContext";
+
+import { vectorImages, images } from "../../assets";
 
 function Trivia() {
-  const { 
-    currentQuestion, 
-    handleAnswer, 
+  const {
+    currentQuestion,
+    handleAnswer,
     isAnswered,
     selectedOptionIndex,
-    selectedCategory
+    selectedCategory,
   } = useQuiz();
 
-  const imgCategory ={
-    "games": mumdogame,
-    "filmes_e_series": mundoFilmes,
-    "redes_sociais": mundoRedes,
-    "desporto": mundoDesporto,
-    "musica": mundomusica,
-    "startups_e_inovacao": mundoStartps
-  }
-
-
-
+  const imgCategory = {
+    games: vectorImages.logos.worlds.games_world,
+    filmes_e_series: vectorImages.logos.worlds.tv_shows_world,
+    redes_sociais: vectorImages.logos.worlds.social_media_world,
+    desporto: vectorImages.logos.worlds.sports_world,
+    musica: vectorImages.logos.worlds.music_world,
+    startups_e_inovacao: vectorImages.logos.worlds.startups_world,
+  };
 
   // Se não houver pergunta atual, mostra uma mensagem de carregamento.
   if (!currentQuestion) {
@@ -72,17 +64,17 @@ function Trivia() {
 
             <div className="tr_resp">
               {currentQuestion.options.map((option, index) => (
-                <Button 
+                <Button
                   className={
                     isAnswered
                       ? option.correct
-                        ? 'btn_Light_corect'
+                        ? "btn_Light_corect"
                         : index === selectedOptionIndex && !option.correct
-                          ? 'btn_Light_incorrect'
-                          : 'btn_questions'
-                      : 'btn_questions'
-                  } 
-                  key={index} 
+                        ? "btn_Light_incorrect"
+                        : "btn_questions"
+                      : "btn_questions"
+                  }
+                  key={index}
                   text={option.answer}
                   onClick={() => handleAnswer(option.correct, index)}
                   disabled={isAnswered}

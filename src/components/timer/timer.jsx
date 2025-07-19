@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuiz } from '../../context/quizContext';
+import { useQuiz } from '../../context/quizContext/quizContext';
 
 function Timer() {
   const { timeLeft } = useQuiz();

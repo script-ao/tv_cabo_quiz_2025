@@ -1,0 +1,26 @@
+
+.wo_wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.wo_title-container {
+    font-size: 12.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wo_buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    width: 10rem;
+    height: 6rem;
+}

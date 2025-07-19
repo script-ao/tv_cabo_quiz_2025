@@ -6,10 +6,10 @@ function AppLayout() {
   return (
     <React.Fragment>
       <section className="app_layout-wrapper">
-        <main>
+        <main className="app_container">
           <Outlet />
+          <Footer />
         </main>
-      {  <Footer />}
       </section>
     </React.Fragment>
   );
