@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import person from "../../assets/images/pessoa2.svg";
-import master from "../../assets/images/svgs/logo/tvcabo.svg";
+
+import { vectorImages, images } from "../../assets";
 
 function Infomation() {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ function Infomation() {
   // Effect to redirect to certificate page after 8 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/certificate');
+      navigate("/certificate");
     }, 8000); // 8 seconds
 
     return () => clearTimeout(timer);
@@ -21,7 +21,7 @@ function Infomation() {
         <main className="inf_container">
           <div className="inf_content">
             <div className="inf_container_image">
-              <img src={master} alt="" />
+              <img src={vectorImages.logos.random.master_games} alt="" />
             </div>
 
             <div className="inf_description">
@@ -35,7 +35,7 @@ function Infomation() {
           </div>
 
           <div className="inf_person_img">
-            <img src={person} alt="" />
+            <img src={images.characters.character_2} alt="" />
           </div>
         </main>
       </section>

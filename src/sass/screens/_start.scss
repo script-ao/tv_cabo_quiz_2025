@@ -1,175 +1,171 @@
-.st_wrapper{
-    flex:1;
-   
-    position: relative;
-    background: url("../assets/images/svgs/backgrounds/FUNDO_CAMPANHA_300MB_TVC_2025.svg") no-repeat;
-    background-size: cover;
-    height: 100svh;
-    font-family: "Poppins";
-    overflow:hidden;
-    //padding: 0 2rem;
+@use "../abstracts" as *;
 
-    &::after{
-        content: '';
-        background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
-        opacity: 0.8;
-        position: absolute;
-        height: 100svh;
-        width: 100%;
-        top:0;
-        z-index: 1;
-    }
+.st_wrapper {
+  flex: 1;
+  display: flex;
+  font-family: "Poppins";
 }
 
-.st_container_content{
-   display:flex;
-   flex-direction: column;
-    justify-content: center;
-    gap:4rem;
-    align-items: center; 
-    height: 100%;
-    position: relative;
-    z-index: 2;
+.st_container {
+  width: 100%;
 
+  flex: 1;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.st__highlight{
-    text-align: center;
+.st_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.st_title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  span {
+    color: #ffff;
     font-weight: 900;
-    color:#fff;
-    font-size: 6rem;
-    line-height: 7rem;
     text-transform: uppercase;
-}
-.st_container_btn{
-    display:grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap:2rem;
-    a {
-    display: flex;
-    justify-content: center;
   }
-    button{
-        background: none;
-        border: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        width: 100%;
 
+  & :first-child {
+    font-size: 25.5rem;
+    line-height: 25.5rem;
+  }
 
-        img{
-            width: 40%;
-        }
-
-        
-
-        span{
-            font-size: 2rem;
-            color: #fff;
-            font-weight: bold;
-        }
-    }
-
-    button:nth-child(2){
-        img{
-            width: 30%;
-        }
-
-    }
-    button:last-child{
-        img{
-            width: 30%;
-        }
-
-    }
+  & :last-child {
+    font-size: 12.5rem;
+    line-height: 12.5rem;
+  }
 }
+.st_highlight {
+  text-align: center;
+  text-transform: uppercase;
 
-@media (min-width: 3840px){
-
-.st_wrapper{
-    flex:1;
-   
-    position: relative;
-    background: url("../assets/images/svgs/backgrounds/FUNDO_CAMPANHA_300MB_TVC_2025.svg") no-repeat;
-    background-size: cover;
-    height: 100svh;
-    font-family: "Poppins";
-    overflow:hidden;
-    //padding: 0 2rem;
-
-    &::after{
-        content: '';
-        background: linear-gradient(to bottom, #081435 0%, #1C2252 100%);
-        opacity: 0.8;
-        position: absolute;
-        height: 100svh;
-        width: 100%;
-        top:0;
-        z-index: 1;
-    }
-}
-
-.st_container_content{
-   display:flex;
-   flex-direction: column;
-    justify-content: center;
-    gap:4rem;
-    align-items: center; 
-    height: 100%;
-    position: relative;
-    z-index: 2;
-
-}
-
-.st__highlight{
-    text-align: center;
-    font-weight: 900;
-    color:#fff;
+  span:first-child {
     font-size: 18rem;
-    line-height: 23rem;
-    text-transform: uppercase;
+  }
+
+  span:last-child {
+    font-size: 8rem;
+  }
 }
-.st_container_btn{
+
+.st_container_subtitle {
+  display: flex;
+  justify-content: center;
+
+  span {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 900;
+  }
+}
+
+.st_img_subtitle {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  width: 30%;
+  img {
+    width: 100%;
+  }
+}
+
+.st_subtitle {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+
+.st_person_img {
+  flex: 1;
+  display: flex;
+  position: relative;
+
+  img {
     width: 80%;
-    gap:8rem;
-    a {
+    margin-bottom: -4rem;
+    z-index: 6;
+  }
+
+}
+
+@media (min-width: 3840px) {
+  .st_content {
+  }
+  .st_highlight {
+    line-height: 35rem;
+
+    p:first-child {
+      font-size: 48rem;
+    }
+
+    p:last-child {
+      font-size: 25rem;
+    }
+  }
+
+  .st_content {
+    gap: 8rem;
+  }
+
+  .st_container_subtitle {
     display: flex;
     justify-content: center;
+    gap: 6rem;
+    margin-bottom: 2rem;
+
+    p {
+      font-size: 5rem;
+      color: #fff;
+      font-weight: 900;
+    }
   }
-    button{
-        
-        width: 100%;
 
+  .st_subtitle {
+    font-size: 4rem;
+    margin: 4rem 0;
+  }
 
-        img{
-            width: 40%;
-        }
+  .st_img_subtitle {
+    width: 100%;
 
-        span{
-            font-size: 7rem;
-            color: #fff;
-            font-weight: bold;
-            
-        }
+    img {
+      width: 100%;
     }
-
-     button:nth-child(2){
-        img{
-            width: 30%;
-        }
-
-    }
-    button:last-child{
-        img{
-            width: 30%;
-        }
-
-    }
+  }
 }
 
+@media (min-resolution: 2dppx) {
+  .st_content {
+    margin-top: 17rem;
+    margin-bottom: 9rem;
+  }
+  .st_highlight {
+    line-height: 12rem;
+
+    p:first-child {
+      font-size: 13rem;
+    }
+
+    p:last-child {
+      font-size: 6rem;
+    }
+  }
+
+  .st_img_subtitle {
+    width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
 }

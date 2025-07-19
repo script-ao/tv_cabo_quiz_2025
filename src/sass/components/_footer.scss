@@ -1,88 +1,111 @@
-.ft_wrapper{
+.ft_wrapper {
+  width: 100%;
+  font-family: "Poppins";
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ft_container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ============= First Container ============= */
+.ft_first-container {
+}
+
+.ft_logo-container img {
+  width: 16.4rem;
+}
+
+/* ============= Seccond Container ============= */
+.ft_seccond_container {
+  display: flex;
+  align-items: center;
+  gap: 4.6rem;
+}
+
+.ft_link-container {
+  span {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+.ft_social_icons-container {
+  display: flex;
+  align-items: center;
+
+  .ft_icons-list {
     display: flex;
-    justify-content:space-between;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    padding: 2rem 7rem;
-    width: 100%;
-    z-index: 4;
-     font-family: "Poppins";
-}
+    gap: 2.4rem;
 
-.ft_image{
-    > img{
-        width: 8rem;
+    li {
+      width: 4.248rem;
+      height: 4.272rem;
+
+      background-color: white;
+      mix-blend-mode: screen;
+      border-radius: 5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        color: #000000;
+        font-size: 2.4rem;
+      }
     }
+  }
 }
 
-.ft_wrapper_social{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    gap: 2rem;
-    span{
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #fff;
-    }
+._social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+  }
 }
 
-.ft_container_social{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    gap: 1.5rem;
-    
-}
-
-.ft_social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    background: #fff;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 100%;
-}
-
-@media (min-width: 3840px){
- .ft_wrapper{
-    
+@media (min-width: 3840px) {
+  .ft_wrapper {
     bottom: 3rem;
     padding: 2rem 10rem;
-    
-}
+  }
 
-.ft_image{
-    > img{
-        width: 24rem;
+  .ft_image {
+    > img {
+      width: 24rem;
     }
-}
+  }
 
-.ft_social{
-    
+  .ft_social {
     font-size: 4rem;
     background: #fff;
     height: 8rem;
     width: 8rem;
     border-radius: 100%;
-}
+  }
 
-.ft_wrapper_social{
-    
+  .ft_wrapper_social {
     gap: 4rem;
-    span{
-        font-size: 4rem;
-        
+    span {
+      font-size: 4rem;
     }
-}
+  }
 
-.ft_container_social{
-    
-   
+  .ft_container_social {
     gap: 4rem;
-    
-}
+  }
 }

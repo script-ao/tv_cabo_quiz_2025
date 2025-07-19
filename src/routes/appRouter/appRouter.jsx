@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { QuizProvider } from "../../context/quizContext";
+import { QuizProvider } from "../../context";
 
 import {
   Start,
@@ -11,7 +11,7 @@ import {
   Register,
   Certificate,
   Lead,
-  Infomation
+  Infomation,
 } from "../../screens";
 import { AppLayout } from "../../layouts";
 

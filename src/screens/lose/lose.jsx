@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../components";
-import { useQuiz } from "../../context/quizContext";
+import { useQuiz } from "../../context/quizContext/quizContext";
 
 function Lose() {
   const { score, questions, resetGame, startNewGame } = useQuiz();

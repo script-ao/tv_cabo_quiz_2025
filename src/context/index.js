@@ -1,1 +1,1 @@
-export * from './quizContext';
+export { QuizProvider } from './quizContext'

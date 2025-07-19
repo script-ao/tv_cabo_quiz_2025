@@ -1,12 +1,8 @@
 import React from "react";
-import comanndo from "../../assets/images/svgs/icon/comando.svg";
-import filme from "../../assets/images/svgs/icon/filme.svg";
-import social from "../../assets/images/svgs/icon/social.svg";
-import desporto from "../../assets/images/svgs/icon/desporto.svg";
-import musica from "../../assets/images/svgs/icon/musica.svg";
-import cup from "../../assets/images/svgs/icon/cup.svg";
 import { useNavigate } from "react-router-dom";
-import { useQuiz } from "../../context/quizContext";
+import { useQuiz } from "../../context/quizContext/quizContext";
+
+import { vectorImages, images } from "../../assets";
 
 function World() {
   const navigate = useNavigate();
@@ -16,52 +12,53 @@ function World() {
     {
       name: "games",
       displayName: "Games",
-      icon: comanndo,
+      icon: vectorImages.icons.game.game_icon,
     },
     {
       name: "filmes_e_series",
       displayName: "Filmes e Séries",
-      icon: filme,
+      icon: vectorImages.icons.game.movie_icon,
     },
     {
       name: "redes_sociais",
       displayName: "Redes Sociais",
-      icon: social,
+      icon: vectorImages.icons.game.social_icon,
     },
     {
       name: "desporto",
       displayName: "Desporto",
-      icon: desporto,
+      icon: vectorImages.icons.game.sport_icon,
     },
     {
       name: "musica",
       displayName: "Música",
-      icon: musica,
+      icon: vectorImages.icons.game.music_icon,
     },
     {
       name: "startups_e_inovacao",
       displayName: "Startups e Inovação",
-      icon: cup,
+      icon: vectorImages.icons.game.startup_icon,
     },
   ];
 
   const handleCategorySelect = (category) => {
     startNewGame(category);
-    navigate('/trivia');
+    navigate("/trivia");
   };
 
   return (
     <React.Fragment>
-      <section className="st_wrapper">
-        <main className="st_container_content">
-          <h1 className="st__highlight">
-            Qual é o <br />
-            teu Mundo
-          </h1>
-          <div className="st_container_btn">
+      <section className="wo_wrapper">
+        <main className="wo_container_content">
+          <div className="wo_title-container">
+            <span>Qual é o</span>
+            <span>teu Mundo</span>
+          </div>
+
+          <div className="wo_buttons-container">
             {itemns_btn.map((item, index) => (
-              <button 
-                key={index} 
+              <button
+                key={index}
                 onClick={() => handleCategorySelect(item.name)}
               >
                 <img src={item.icon} alt="" />
