@@ -150,7 +150,7 @@ function Lead() {
                   <option value="Huila">Huíla</option>
                   <option value="Huambo">Huambo</option>
                   <option value="Zaire">Zaire</option>
-                  <option value="nao possui minha zona"></option>
+                  <option value="sem cubertura">Não listado(sem cubertura TVCABO)</option>
 
                   
                 </select>
