@@ -7,7 +7,7 @@ function Infomation() {
   const navigate = useNavigate();
 
   // Effect to redirect to certificate page after 8 seconds
- useEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/certificate");
     }, 8000); // 8 seconds
@@ -21,7 +21,7 @@ function Infomation() {
         <main className="inf_container">
           <div className="inf_content">
             <div className="inf_container_image">
-              <img src={vectorImages.logos.random.master_games} alt="" />
+              <img src={vectorImages.logos.brand.brand_logo} alt="" />
             </div>
 
             <div className="inf_description">

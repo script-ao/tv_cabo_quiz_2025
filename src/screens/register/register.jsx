@@ -122,6 +122,8 @@ function Register() {
                   onChange={(e) => setPhone(e.target.value)}
                   required
                 />
+
+                <span className="re_aut">Autorizo o tratamento de dados</span>
               </div>
             </div>
             <div className="re_btn">

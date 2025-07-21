@@ -86,7 +86,7 @@ function Lead() {
         />}
         <main className="le_container">
           <div className="le_highlight">
-            <span>Responde <br />O FORMULÁRIO </span>
+            <span>Vamos<br />Começar </span>
           </div>
 
           <form className="le_form" onSubmit={handleSubmit}>
@@ -150,6 +150,7 @@ function Lead() {
                   <option value="Huila">Huíla</option>
                   <option value="Huambo">Huambo</option>
                   <option value="Zaire">Zaire</option>
+                  <option value="sem cubertura">Não listado(sem cubertura TVCABO)</option>
 
                   
                 </select>
