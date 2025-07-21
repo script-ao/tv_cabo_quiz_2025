@@ -1,15 +1,11 @@
-@use "../abstracts" as * ;
+@use "../abstracts" as *;
 .inf_wrapper {
   flex: 1;
   display: flex;
-  
-  
 }
 
 .inf_container {
   width: 100%;
-
-
 
   display: flex;
   justify-content: space-between;
@@ -21,11 +17,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   gap: 2rem;
-
- 
-
 }
 
 .inf_description {
@@ -39,42 +32,26 @@
     line-height: 6.5rem;
   }
 
-  p:last-child{
+  p:last-child {
     font-weight: bold;
   }
-
- 
 }
-
-
-
-
 
 .inf_container_image {
   display: flex;
-  
+
   width: 100%;
   img {
     width: 30rem;
-    
   }
 }
 
 .inf_person_img {
   position: absolute;
   left: 85rem;
-  bottom: -9rem;
-
+  bottom: -10rem;
 
   img {
     width: 95%;
-   
-   
   }
-
 }
-
-
-
-
-

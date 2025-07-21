@@ -61,7 +61,7 @@
           ]
         },
         {
-          "question": "O que é que a Internet Ilimitada da TVCABO lhe permite fazer nas redes sociais sem te preocupares com o consumo excessivo de dados?",
+          "question": "O que é que a Internet Ilimitada da TVCABO permite fazer nas redes sociais sem te preocupares com o consumo excessivo de dados?",
           "options": [
             {"answer": "Apenas enviar mensagens de texto", "correct": false},
             {"answer": "Assistir longos Podcasts e lives em alta definição", "correct": true},

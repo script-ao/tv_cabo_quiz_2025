@@ -65,7 +65,7 @@ function Certificate() {
   useEffect(() => {
     const time = setTimeout(() => {
       resetGame(); // This will clear userData and navigate to "/"
-    }, 10000);
+    }, 30000);
 
     return () => clearTimeout(time);
   }, [resetGame]);
@@ -79,11 +79,11 @@ function Certificate() {
               <div className="ce_logo_img">
                 <img src={vectorImages.logos.brand.brand_logo} alt="" />
               </div>
-              <p>Sempre ligado</p>
+              <p>Sempre ligads</p>
             </div>
 
             <div className="ce_description">
-              <span>A TV CABO </span>
+              <span>A TVCABO </span>
               <span>Certifica que o mundo de</span>
             </div>
             <div className="ce_inf">
