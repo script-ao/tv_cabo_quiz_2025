@@ -12,7 +12,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    gap:14rem;
+    gap:4rem;
     flex-direction: column;
    
 
@@ -20,7 +20,7 @@
 
 
 .wo_title-container {
-    font-size: 12.5rem;
+    font-size: 10.5rem;
     font-family: "Poppins", sans-serif;
     line-height: 12rem;
     font-weight: 900;
@@ -28,7 +28,11 @@
     
     display: flex;
     flex-direction: column;
+    text-align: center;
     
+    span{
+        text-transform: uppercase;
+    }
     
 }
 
@@ -63,77 +67,3 @@
 }
 
 
-@media (min-width: 3840px) {
-
-.wo_container_content{
-    display: flex;
-   
-    
-}
-
-
-.wo_title-container {
-    font-size: 22rem;
-    font-family: "Poppins", sans-serif;
-    line-height: 26rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: white;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-   
-    
-}
-
-.wo_buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 30rem;
-    row-gap: 10rem;
-    width: 100%;
-    
-    
-    
-    
-
-   > button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: transparent;
-    border: none;
-    font-size: 5rem;
-    font-weight: 800;
-    gap: 3rem;
-    color: #fff;
-       
-    img{
-        width: 60%;
-        
-    }
-       
-   }
-
-
-   button:first-child{
-    img{
-        width: 80%;
-    }
-   }
-   button:nth-child(4){
-    img{
-     width: 70%;
-    }
-   }
-   button:nth-child(5){
-    img{
-        width: 88%;
-    }
-   }
-}
-}

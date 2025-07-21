@@ -18,8 +18,8 @@ function Start() {
           <div className="st_content">
             <div>
               <div className="st_title-container">
-                <span>Explora</span>
-                <span>O teu mundo</span>
+                <span className="st_h1">Explora</span>
+                <span className="st_h2">O teu mundo</span>
               </div>
               <div className="st_container_subtitle">
                 <div className="st_image_subtitle">
@@ -35,7 +35,6 @@ function Start() {
               />
             </div>
           </div>
-
           <div className="st_person_img">
             <img src={images.characters.character_1} alt="" />
           </div>
