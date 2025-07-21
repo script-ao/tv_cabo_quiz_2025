@@ -7,7 +7,7 @@ function Infomation() {
   const navigate = useNavigate();
 
   // Effect to redirect to certificate page after 8 seconds
-  useEffect(() => {
+ useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/certificate");
     }, 8000); // 8 seconds
