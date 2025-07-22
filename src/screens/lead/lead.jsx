@@ -45,7 +45,7 @@ function Lead() {
         setvalueModal(
           {
             className: "btn_sucess",
-            text: "Obrigado por preencher",
+            text: "",
             to: "/intro"
           }
         )

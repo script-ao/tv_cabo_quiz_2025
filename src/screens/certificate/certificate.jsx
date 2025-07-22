@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuiz } from "../../context/quizContext/quizContext";
-
+import {Button} from "../../components"
 // Images and Vectors
 import { vectorImages, images } from "../../assets";
 
@@ -70,6 +70,10 @@ function Certificate() {
     return () => clearTimeout(time);
   }, [resetGame]);
 
+  function handleClick(){
+    resetGame();
+    navigate("/")
+  }
   return (
     <React.Fragment>
       <section className="ce_wrapper">
@@ -97,7 +101,9 @@ function Certificate() {
                 <span>Data: {dataFormatada}</span>
               </div>
               <div className="ce_assin"></div>
+
             </div>
+              <div><Button className="btn btn_Light" onClick={ handleClick} text="avançar"/></div>
           </div>
         </main>
       </section>

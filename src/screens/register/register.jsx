@@ -51,7 +51,7 @@ function Register() {
           className: "btn_sucess",
           text: "Obrigado por se registrar!",
           to: "/information",
-          buttonText: "Continuar",
+          buttonText: "Avançar",
         });
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
