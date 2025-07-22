@@ -123,7 +123,7 @@ function Register() {
                   required
                 />
 
-                <span className="re_aut">Autorizo o tratamento de dados</span>
+                <span className="re_aut">Autorizo o tratamento dos meus dados, porque o meu mundo é feito de fibra.</span>
               </div>
             </div>
             <div className="re_btn">

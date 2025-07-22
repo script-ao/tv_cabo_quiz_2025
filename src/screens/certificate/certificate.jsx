@@ -79,7 +79,7 @@ function Certificate() {
               <div className="ce_logo_img">
                 <img src={vectorImages.logos.brand.brand_logo} alt="" />
               </div>
-              <p>Sempre ligados</p>
+              <p>Sempre ligados.</p>
             </div>
 
             <div className="ce_description">
