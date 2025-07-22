@@ -18,8 +18,8 @@ function Start() {
           <div className="st_content">
             <div>
               <div className="st_title-container">
-                <span className="st_h1">Explora</span>
-                <span className="st_h2">O teu mundo</span>
+                <span className="st_h1">EXPLORA</span>
+                <span className="st_h2">O TEU MUNDO</span>
               </div>
               <div className="st_container_subtitle">
                 <div className="st_image_subtitle">
