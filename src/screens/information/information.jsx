@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import { vectorImages, images } from "../../assets";
 
+import {Button} from "../../components"
+
 function Infomation() {
   const navigate = useNavigate();
 
@@ -14,6 +16,10 @@ function Infomation() {
 
     return () => clearTimeout(timer);
   }, [navigate]);
+
+  function handleClick (){
+     navigate("/certificate");
+  }
 
   return (
     <React.Fragment>
@@ -31,6 +37,9 @@ function Infomation() {
                 <br />
                 <span>A tua Fibra é o Teu Mundo!</span>
               </p>
+            </div>
+            <div >
+              <Button text="Avançar " className="btn btn_Light" onClick={handleClick}/>
             </div>
           </div>
 

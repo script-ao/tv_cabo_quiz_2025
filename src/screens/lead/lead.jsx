@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal } from "../../components";
-
+import {useNavigate} from "react-router-dom"
 
 function Lead() {
   const [ageRange, setAgeRange] = useState("");
@@ -8,6 +8,8 @@ function Lead() {
   const [residence, setResidence] = useState("");
   const [OpenModal, setOpenModal] = useState(false);
   const [valueModal, setvalueModal] = useState({});
+  const navigate = useNavigate();
+  
   
 
   const handleSubmit = async (event) => {
@@ -49,7 +51,7 @@ function Lead() {
             to: "/intro"
           }
         )
-        //navigate("/intro");
+        navigate("/intro");
       } else {
         console.error("Falha ao enviar o formulário:", response.statusText);
         setOpenModal(true)
@@ -78,12 +80,12 @@ function Lead() {
   return (
     <React.Fragment>
       <section className="le_wrapper">
-        {OpenModal && <Modal
+        {/*OpenModal && <Modal
           text={valueModal.text}
           setOpenModal={setOpenModal}
           className={valueModal.className}
           to={valueModal.to}
-        />}
+        />*/}
         <main className="le_container">
           <div className="le_highlight">
             <span>Vamos<br />Começar </span>
